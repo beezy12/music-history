@@ -1,8 +1,8 @@
 #topbar {
-	width: 90%;
-	height: 60px;
+	width: 1135px;
+	height: 80px;
 	background-color: #FFB4B0;
-	margin: 40px 60px;
+	margin: 40px 60px 0 60px;
 	border: 3px solid black;
 }
 
@@ -13,7 +13,7 @@
 
 #topbar li {
 	display: inline;
-	padding: 0 15px 0 20px;
+	padding: 20px 15px 0 20px;
 	margin-top: 10px;
 }
 
@@ -23,4 +23,23 @@
 
 #topbar a {
 	text-decoration: none;
+}
+
+#leftColumn {
+	padding: 10px;
+	width: 300px;
+	height: 500px;
+	background-color: #4DD7FA;
+	margin: 20px 20px 0 60px;
+	border: 3px solid black;
+	float: left;
+}
+
+#rightColumn {
+	width: 807px;
+	height: 500px;
+	background-color: #FEFAC0;
+	float: left;
+	border: 3px solid black;
+	margin: 20px 0 0 0;
 }
