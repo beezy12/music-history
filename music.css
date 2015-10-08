@@ -1,3 +1,26 @@
 #topbar {
-	width: 80%;
+	width: 90%;
+	height: 60px;
+	background-color: #FFB4B0;
+	margin: 40px 60px;
+	border: 3px solid black;
+}
+
+#topbar ul {
+	list-style-type: none;
+	padding: 5px 0 10px 0;
+}
+
+#topbar li {
+	display: inline;
+	padding: 0 15px 0 20px;
+	margin-top: 10px;
+}
+
+#bord {
+	border-right: 2px solid black;
+}
+
+#topbar a {
+	text-decoration: none;
 }
