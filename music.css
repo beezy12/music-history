@@ -1,20 +1,26 @@
+body {
+	font-family: Oswald, Montserrat, sans-serif;
+}
+
 #topbar {
 	width: 1135px;
 	height: 80px;
 	background-color: #FFB4B0;
 	margin: 40px 60px 0 60px;
 	border: 3px solid black;
+	box-sizing: border-box;
 }
 
 #topbar ul {
 	list-style-type: none;
-	padding: 5px 0 10px 0;
+	padding: 0 0 10px 0;
+	margin: 30px 0 0 0;
 }
 
 #topbar li {
 	display: inline;
-	padding: 20px 15px 0 20px;
-	margin-top: 10px;
+	padding: 0 20px 0 20px;
+	
 }
 
 #bord {
@@ -26,20 +32,37 @@
 }
 
 #leftColumn {
-	padding: 10px;
+	padding: 20px;
 	width: 300px;
 	height: 500px;
 	background-color: #4DD7FA;
 	margin: 20px 20px 0 60px;
 	border: 3px solid black;
 	float: left;
+	box-sizing: border-box;
 }
 
 #rightColumn {
-	width: 807px;
+	width: 814px;
 	height: 500px;
 	background-color: #FEFAC0;
 	float: left;
 	border: 3px solid black;
 	margin: 20px 0 0 0;
+	box-sizing: border-box;
 }
+
+.margBot {
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
