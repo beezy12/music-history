@@ -14,7 +14,7 @@ body {
 #topbar ul {
 	list-style-type: none;
 	padding: 0 0 10px 0;
-	margin: 30px 0 0 0;
+	margin: 25px 0 0 0;
 }
 
 #topbar li {
@@ -54,6 +54,10 @@ body {
 
 .margBot {
 	margin-bottom: 15px;
+}
+
+.center {
+	margin: 0 auto;
 }
 
 
