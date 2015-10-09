@@ -32,7 +32,7 @@ body {
 }
 
 #leftColumn {
-	padding: 20px;
+	padding: 40px 0 0 80px;
 	width: 300px;
 	height: 500px;
 	background-color: #4DD7FA;
@@ -61,6 +61,14 @@ body {
 }
 
 
+#rightColumn{
+	padding: 30px 0 0 80px;
+}
+
+.songs li {
+	display: inline;
+	padding: 0 10px 0 10px;
+}
 
 
 
