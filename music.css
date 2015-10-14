@@ -11,13 +11,11 @@ body {
 
 #topbar ul {
 	list-style-type: none;
-	padding: 0 0 10px 0;
-	margin: 25px 0 0 0;
+	
 }
 
 #topbar li {
-	display: inline;
-	padding: 0 20px 0 20px;
+	display: inline-block;
 	
 }
 

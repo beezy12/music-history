@@ -2,6 +2,8 @@ var songs = [];
 var output = "";
 var mine = document.getElementById("rightColumn");
 
+var dash = "";
+
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
@@ -11,6 +13,13 @@ songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little
 
 songs.push("Lady Madonna > by The Beatles on Let It Be");
 songs.unshift("Vogue > by Madonna on the album Im Dirty");
+
+dash = songs[i].indexOf("-");
+console.log("index of dash", dash);
+
+if (dash !== -1) {
+	
+}
 
 
 for (i = 0; i < songs.length; i++) {
