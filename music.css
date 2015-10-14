@@ -16,32 +16,32 @@ body {
 	flex-grow: 7;
 }
 
-#topbar {
+.topbar {
 	
 	background-color: #FFB4B0;
 	
 	box-sizing: border-box;
 }
 
-#topbar ul {
+.topbar ul {
 	list-style-type: none;
 	
 }
 
-#topbar li {
+.topbar li {
 	display: inline-block;
 	
 }
 
-#bord {
+.bord {
 	border-right: 2px solid black;
 }
 
-#topbar a {
+.topbar a {
 	text-decoration: none;
 }
 
-#leftColumn {
+.leftColumn {
 	
 	background-color: #4DD7FA;
 
@@ -51,8 +51,7 @@ body {
 }
 
 #rightColumn {
-	width: 814px;
-	height: 500px;
+	
 	background-color: #FEFAC0;
 	
 	border: 3px solid black;
@@ -69,9 +68,7 @@ body {
 }
 
 
-#rightColumn{
-	
-}
+.
 
 .songs li {
 	display: inline;
