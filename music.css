@@ -2,7 +2,7 @@ body {
 	font-family: Oswald, Montserrat, sans-serif;
 }
 
-#container {
+#flex-container {
 	padding: 0;
 	margin: 0;
 	display: flex;
@@ -10,16 +10,16 @@ body {
     -webkit-flex-wrap: wrap;
 }
 
-.flex-item topbar {
+.flex-item {
+	width: 100px;
+}
+
+.topbar {
 	flex: 1 100%;
 }
 
-.leftColumn{
-	flex-grow: 3;
-}
-
-.flex-item {
-	flex-grow: 7;
+.topbar a {
+	text-decoration: none;
 }
 
 .topbar {
@@ -35,13 +35,24 @@ body {
 	
 }
 
+.topbar * {
+	
+}
+
 .bord {
 	border-right: 2px solid black;
 }
 
-.topbar a {
-	text-decoration: none;
+.leftColumn{
+	flex-grow: 4;
 }
+
+#rightColumn{
+	flex-grow: 7;
+}
+
+
+
 
 .leftColumn {
 	
