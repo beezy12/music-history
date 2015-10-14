@@ -1,7 +1,7 @@
 var songs = [];
-
-var mine = document.getElementById("rightColumn");
 var output = "";
+var mine = document.getElementById("rightColumn");
+
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
@@ -19,6 +19,7 @@ for (i = 0; i < songs.length; i++) {
 	songs[i] = songs[i].replace("(", "");
 	songs[i] = songs[i].replace("!", "");
 	songs[i] = songs[i].replace(/>/g, "-");
+	songs[i] = songs[i].replace(/on the album/g, " - ");
 	output += "<div>";
 	output += songs[i];
 	output += "</div>";
