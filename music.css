@@ -36,41 +36,31 @@ body {
 }
 
 .topbar * {
-	
+
 }
 
 .bord {
 	border-right: 2px solid black;
 }
 
+/*.theseTwo {
+
+}*/
+
 .leftColumn{
-	flex-grow: 4;
+	flex-grow: 2;
+	background-color: #4DD7FA;
+	border: 3px solid black;
+	box-sizing: border-box;
 }
 
 #rightColumn{
 	flex-grow: 7;
-}
-
-
-
-
-.leftColumn {
-	
-	background-color: #4DD7FA;
-
-	border: 3px solid black;
-
-	box-sizing: border-box;
-}
-
-#rightColumn {
-	
 	background-color: #FEFAC0;
-	
 	border: 3px solid black;
-	
 	box-sizing: border-box;
 }
+
 
 .margBot {
 	margin-bottom: 15px;

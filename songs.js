@@ -1,4 +1,5 @@
 var songs = [];
+var currentSongs = [];
 var output = "";
 var mine = document.getElementById("rightColumn");
 
@@ -14,12 +15,6 @@ songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little
 songs.push("Lady Madonna > by The Beatles on Let It Be");
 songs.unshift("Vogue > by Madonna on the album Im Dirty");
 
-// dash = songs[i].indexOf("-");
-console.log("index of dash", dash);
-
-/* if (dash !== -1) {
-
-} */
 
 
 for (i = 0; i < songs.length; i++) {
@@ -29,9 +24,19 @@ for (i = 0; i < songs.length; i++) {
 	songs[i] = songs[i].replace("!", "");
 	songs[i] = songs[i].replace(/>/g, "-");
 	songs[i] = songs[i].replace(/on the album/g, " - ");
-	output += "<div>";
-	output += songs[i];
-	output += "</div>";
+	
+
+	dash = songs[i].indexOf("-");
+	console.log("index of dash", dash);
+	if (dash !== -1) {
+		currentSongs[i] = songs[i].slice(dash + 1);
+		songs[i] = songs[i].slice(0, dash);
+	} 
+
+	console.log("Songs[i]", songs[i]);
+    console.log("currentSongs", currentSongs);
+
+    output += "<div><h2>" + songs[i] + "</h2> <h4>" + currentSongs[i] + "</h4></div";
 }
 
 console.log("Added these songs: ", songs);
