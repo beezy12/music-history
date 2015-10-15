@@ -36,7 +36,7 @@ p {
 
 .nav {
 	flex: 1 100%;
-	margin: 20px 20px 0 20px;
+	margin: 20px 20px 20px 20px;
 	background-color: #FFB4B0;
 	box-sizing: border-box;
 	position: fixed;
