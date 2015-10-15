@@ -12,7 +12,7 @@ songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album Th
 songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
 songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
-songs.push("Lady Madonna > by The Beatles on Let It Be");
+songs.push("Don't Let Me Down > by The Beatles on the album Let It Be");
 songs.unshift("Vogue > by Madonna on the album Im Dirty");
 
 
@@ -36,7 +36,7 @@ for (i = 0; i < songs.length; i++) {
 	console.log("Songs[i]", songs[i]);
     console.log("currentSongs", currentSongs[i]);
 
-    output += "<div><h3>" + songs[i] + "</h3>" + currentSongs[i] + "</div>";
+    output += "<div>" + songs[i] + " " + currentSongs[i] + "</div>";
 }
 
 console.log("Added these songs: ", songs);
