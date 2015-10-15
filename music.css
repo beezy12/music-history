@@ -92,7 +92,7 @@ p {
 	margin-bottom: 15px;
 }
 
-#rightColumn{
+#rightColumn {
 	flex-grow: 7;
 	background-color: #FEFAC0;
 	border: 3px solid black;
