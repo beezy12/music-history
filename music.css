@@ -1,51 +1,35 @@
 body {
 	font-family: Oswald, Montserrat, sans-serif;
-}
-
-#flex-container {
 	padding: 0;
 	margin: 0;
+}
+
+.flex-container {
 	display: flex;
 	-webkit-flex-direction: row;
     -webkit-flex-wrap: wrap;
+    list-style: none; 
+    /*height: 50em  is what steve had, the rest here is the same tho*/
 }
 
 .flex-item {
-	width: 100px;
+	width: 200px;
+	flex-grow: 1;
 }
 
-.topbar {
+.nav {
 	flex: 1 100%;
-}
-
-.topbar a {
-	text-decoration: none;
-}
-
-.topbar {
-	
+	margin: 30px 30px 0 30px;
 	background-color: #FFB4B0;
-	
 	box-sizing: border-box;
 }
 
-.topbar ul, li {
+
+.nav * {
 	list-style-type: none;
 	display: inline-block;
-	
+	text-decoration: none;
 }
-
-.topbar * {
-
-}
-
-.bord {
-	border-right: 2px solid black;
-}
-
-/*.theseTwo {
-
-}*/
 
 .leftColumn{
 	flex-grow: 2;
@@ -61,21 +45,39 @@ body {
 	box-sizing: border-box;
 }
 
+.bord {
+	border-right: 2px solid black;
+}
 
-.margBot {
+/*.topbar a {
+}*/
+
+
+
+/*.topbar ul, li {
+	
+}*/
+
+/*.theseTwo {
+	height: 400px;
+}*/
+
+
+
+/*.margBot {
 	margin-bottom: 15px;
-}
+}*/
 
-.center {
+/*.center {
 	margin: 0 auto;
-}
+}*/
 
 
-.
 
-.songs li {
+
+/*.songs li {
 	display: inline-block;
-}
+}*/
 
 
 

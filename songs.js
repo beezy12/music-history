@@ -36,7 +36,7 @@ for (i = 0; i < songs.length; i++) {
 	console.log("Songs[i]", songs[i]);
     console.log("currentSongs", currentSongs);
 
-    output += "<div><h2>" + songs[i] + "</h2> <h4>" + currentSongs[i] + "</h4></div";
+    output += "<div>" + songs[i] + "<br/>" + currentSongs[i] + "</div";
 }
 
 console.log("Added these songs: ", songs);
