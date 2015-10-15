@@ -23,7 +23,7 @@ for (i = 0; i < songs.length; i++) {
 	songs[i] = songs[i].replace("(", "");
 	songs[i] = songs[i].replace("!", "");
 	songs[i] = songs[i].replace(/>/g, "-");
-	songs[i] = songs[i].replace(/on the album/g, " - ");
+	songs[i] = songs[i].replace(/on the album/g, " --- album: ");
 	
 
 	dash = songs[i].indexOf("-");
@@ -36,7 +36,7 @@ for (i = 0; i < songs.length; i++) {
 	console.log("Songs[i]", songs[i]);
     console.log("currentSongs", currentSongs[i]);
 
-    output += "<div>" + songs[i] + " " + currentSongs[i] + "</div>";
+    output += "<div class='spread-em'>" + songs[i] + "<br/>" + currentSongs[i] + "</div>";
 }
 
 console.log("Added these songs: ", songs);

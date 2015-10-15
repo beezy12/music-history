@@ -4,6 +4,10 @@ body {
 	margin: 0;
 }
 
+p {
+	margin: 0;
+}
+
 .flex-container {
 	display: flex;
 	-webkit-flex-direction: row;
@@ -22,6 +26,13 @@ body {
   width: 100px;
   border: 3px solid
 }
+
+
+
+
+/*************************************************
+   NAVIGATION
+*************************************************/
 
 .nav {
 	flex: 1 100%;
@@ -45,7 +56,6 @@ body {
 
 }
 
-
 .nav * {
 	list-style-type: none;
 	display: inline-block;
@@ -64,6 +74,14 @@ body {
 	border-right: 2px solid black;
 }
 
+
+
+
+
+/**************************************
+  Middle Boxes
+**************************************/
+
 .leftColumn{
 	flex-grow: 2;
 	background-color: #4DD7FA;
@@ -75,58 +93,42 @@ body {
 	
 }
 
+.margBot {
+	margin-bottom: 15px;
+}
+
 #rightColumn{
 	flex-grow: 7;
 	background-color: #FEFAC0;
 	border: 3px solid black;
 	box-sizing: border-box;
-	padding: 40px 0 0 40px;
+	/*padding: 40px 0 0 40px;*/
 	margin: 0 20px 0 0;
 	box-sizing: border-box;
+	padding: 0 0 0 0;
+	font-size: 1.4em;
 }
 
 #rightColumn :first-child {
 	font-weight: bold;
 }
 
-#rightColumn :nth-child(2n+0) {
-	background-color: #FFF5EE;
+#rightColumn :nth-child(2n+0) {  /*even*/
+	background-color: #FFF5EE;	 /*SeaShell*/
 }
 
-#rightColumn :nth-child(2n+1) {
-	background-color: #F5FFFA;
+#rightColumn :nth-child(2n+1) {  /*odd*/
+	background-color: #F5FFFA;   /*MintCream*/
+}
+
+.spread-em {
+	margin: 0 0 0 0;
+	padding: 20px 0 20px 30px;
 }
 
 
-/*.topbar a {
-}*/
 
 
-
-/*.topbar ul, li {
-	
-}*/
-
-/*.theseTwo {
-	height: 400px;
-}*/
-
-
-
-.margBot {
-	margin-bottom: 15px;
-}
-
-/*.center {
-	margin: 0 auto;
-}*/
-
-
-
-
-/*.songs li {
-	display: inline-block;
-}*/
 
 
 
