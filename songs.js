@@ -24,6 +24,7 @@ for (i = 0; i < songs.length; i++) {
 	songs[i] = songs[i].replace("!", "");
 	songs[i] = songs[i].replace(/>/g, "-");
 	songs[i] = songs[i].replace(/on the album/g, " --- album: ");
+
 	
 
 	dash = songs[i].indexOf("-");
