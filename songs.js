@@ -1,9 +1,9 @@
 var songs = [];
 var currentSongs = [];
 var output = "";
+var dash = "";
 var mine = document.getElementById("rightColumn");
 
-var dash = "";
 
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
@@ -27,16 +27,16 @@ for (i = 0; i < songs.length; i++) {
 	
 
 	dash = songs[i].indexOf("-");
-	console.log("index of dash", dash);
+	// console.log("index of dash", dash);
 	if (dash !== -1) {
 		currentSongs[i] = songs[i].slice(dash + 1);
 		songs[i] = songs[i].slice(0, dash);
 	} 
 
 	console.log("Songs[i]", songs[i]);
-    console.log("currentSongs", currentSongs);
+    console.log("currentSongs", currentSongs[i]);
 
-    output += "<div>" + songs[i] + "<br/>" + currentSongs[i] + "</div";
+    output += "<div><h3>" + songs[i] + "</h3>" + currentSongs[i] + "</div>";
 }
 
 console.log("Added these songs: ", songs);

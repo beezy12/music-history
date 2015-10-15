@@ -10,11 +10,17 @@ body {
     -webkit-flex-wrap: wrap;
     list-style: none; 
     /*height: 50em  is what steve had, the rest here is the same tho*/
+
+    /*align-content: space-around;*/
+    /*align-items: center;*/
 }
 
-.flex-item {
-	width: 200px;
-	flex-grow: 1;
+.flex-item {  
+  background: tomato;
+  padding: 10px;
+  /* The width property here is important. Explain why */
+  width: 100px;
+  border: 3px solid
 }
 
 .nav {
@@ -22,6 +28,21 @@ body {
 	margin: 30px 30px 0 30px;
 	background-color: #FFB4B0;
 	box-sizing: border-box;
+
+	position: fixed;
+	width: 100%;
+}
+
+.nav2 {
+	flex: 1 100%;
+	margin: 30px 30px 0 30px;
+	background-color: #FFB4B0;
+	box-sizing: border-box;
+
+	/*position: fixed;
+	width: 100%;*/
+	visibility: hidden;
+
 }
 
 
@@ -31,11 +52,23 @@ body {
 	text-decoration: none;
 }
 
+.nav-bord {
+	border-right: 2px solid black;
+}
+
+.nav a {
+	padding: 0 20px;
+}
+
 .leftColumn{
 	flex-grow: 2;
 	background-color: #4DD7FA;
 	border: 3px solid black;
 	box-sizing: border-box;
+	padding: 80px 0 0 40px;
+	margin: 0 20px 0 20px;
+	box-sizing: border-box;
+	
 }
 
 #rightColumn{
@@ -43,9 +76,12 @@ body {
 	background-color: #FEFAC0;
 	border: 3px solid black;
 	box-sizing: border-box;
+	padding: 40px 0 0 40px;
+	margin: 0 20px 0 0;
+	box-sizing: border-box;
 }
 
-.bord {
+.nav-bord {
 	border-right: 2px solid black;
 }
 
@@ -64,9 +100,9 @@ body {
 
 
 
-/*.margBot {
+.margBot {
 	margin-bottom: 15px;
-}*/
+}
 
 /*.center {
 	margin: 0 auto;
