@@ -9,120 +9,98 @@
 </head>
 
 <body>
-  <div class="flex-container"> <!-- parent -->
-    
-    
-      <div class="flex-item nav">
-        <ul>
-          <li class="nav-bord"><a href="index.html">View Music</a></li>
-          <li class="nav-bord"><a href="add.html">Add Music</a></li>
-          <li><a href="profile.html">Profile</a></li>
-        </ul>
+
+  <form action="form.html" method="POST">
+    <div id="topbar">
+      <ul>
+        <li id="bord"><a href="index.html">List Music</a></li>
+        <li id="bord"><a href="add.html">Add Music</a></li>
+      </ul>
+
+      <div class="labels">
+
+        <label for="song-name" >Song Name</label>
+        <input type="text" name="song-name">
+
+        <label for="artist-name" >Artist Name</label>
+        <input type="text" name="artist-name">
+
+        <label for="album-name" >Album Name</label>
+        <input type="text" name="album-name">
+        <br/>
+
+        <button id="add">Add</button>
       </div>
+    </div>
 
-      <div class="flex-item nav2">
-        <ul>
-          <li class="nav-bord"><a href="index.html">View Music</a></li>
-          <li class="nav-bord"><a href="add.html">Add Music</a></li>
-          <li><a href="profile.html">Profile</a></li>
-        </ul>
-      </div>
-
-    <!-- <div class="theseTwo"> -->
-      <div class="flex-item leftColumn">
-        <form action="form.html" method="POST">
-        <!-- <div class="center"> -->
-          <div>
-            <label for="songLength">Song Length:</label>
-          </div>
-          <div class="margBot">
-            <input type="range" name="songLength" min="0" max="50" step="0.5" value="25">
-          </div>
-        <!-- </div> -->
-
-          <div>
-            <label for="artist">Artist:</label>
-          </div>
-          <div class="margBot">
-            <select class="artist" class="margBot" name="artist">
-              <option>Radiohead</option>
-              <option>The Verve</option>
-              <option>Neil Young</option>
-            </select>
-          </div>
-            
-          <div>
-            <label for="albumSelect">Album:</label>
-          </div>
-          <div class="margBot">
-            <select class="album" name="album">
-              <option>OK Computer</option>
-              <option>Urban Hymns</option>
-              <option>Harvest</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="genre">Genre:</label>
-          </div>
-            <table>
-              <tr>
-                <td><input type="checkbox" name="rock" value="rock">Rock</td>
-                <td><input type="checkbox" name="classical" value="classical">Classical</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="pop" value="pop">Pop</td>
-                <td><input type="checkbox" name="jazz" value="jazz">Jazz</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" name="blues" value="blues">Blues</td>
-                <td><input type="checkbox" name="hip hop" value="hip hop">Hip Hop</td>
-              </tr>
-            </table>
-
-          <div>
-            <input type="submit" value="Submit Details"></input>
-          </div>
-        </form>
-      </div>  <!-- closing div for l column -->
-    
+    <div id="leftColumn">
       
-      <div class="flex-item" id="rightColumn">
+      <div class="center">
+        <div>
+          <label for="songLength">Song Length:</label>
+        </div>
+        <div class="margBot">
+          <input type="range" name="songLength" min="0" max="50" step="0.5" value="25">
+        </div>
       </div>
 
-    <!-- </div>   these two -->
+        <div>
+          <label for="artist">Artist:</label>
+        </div>
+        <div class="margBot">
+          <select id="artist" class="margBot" name="artist">
+            <option>Radiohead</option>
+            <option>The Verve</option>
+            <option>Neil Young</option>
+          </select>
+        </div>
+          
+        <div>
+          <label for="albumSelect">Album:</label>
+        </div>
+        <div class="margBot">
+          <select id="album" class="margBot" name="album">
+            <option>OK Computer</option>
+            <option>Urban Hymns</option>
+            <option>Harvest</option>
+          </select>
+        </div>
 
-  </div>  <!-- closing for container -->
-  <script src="songs.js"></script>
+        <div>
+          <label for="genre">Genre:</label>
+        </div>
+        <div class="margBot">
+          <table>
+            <tr>
+              <td><input type="checkbox" name="rock" value="rock">Rock</td>
+              <td><input type="checkbox" name="classical" value="classical">Classical</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="pop" value="pop">Pop</td>
+              <td><input type="checkbox" name="jazz" value="jazz">Jazz</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="blues" value="blues">Blues</td>
+              <td><input type="checkbox" name="hip hop" value="hip hop">Hip Hop</td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <input type="submit" value="Submit Details"></input>
+        </div>
+    
+    </div>  <!-- closing div for l column -->
+
+  </form>
+  
+
+
+  <div id="rightColumn">
+
+  </div>
+
+<script src="songs.js"></script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

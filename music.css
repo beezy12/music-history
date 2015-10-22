@@ -1,135 +1,79 @@
 body {
 	font-family: Oswald, Montserrat, sans-serif;
-	padding: 0;
-	margin: 0;
 }
 
-p {
-	margin: 0;
-}
-
-.flex-container {
-	display: flex;
-	-webkit-flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    list-style: none; 
-    /* height: 10em;  is what steve had, the rest here is the same tho*/
-
-    /*align-content: space-around;*/
-    /*align-items: center;*/
-}
-
-.flex-item {  
-  background: tomato;
-  padding: 10px;
-  /* The width property here is important. Explain why */
-  width: 100px;
-  border: 3px solid
-}
-
-
-
-
-/*************************************************
-   NAVIGATION
-*************************************************/
-
-.nav {
-	flex: 1 100%;
-	margin: 20px 20px 0 20px;
+#topbar {
+	width: 1135px;
+	height: 120px;
 	background-color: #FFB4B0;
+	margin: 40px 60px 0 60px;
+	border: 3px solid black;
 	box-sizing: border-box;
-	position: fixed;
-	width: 100%;
 }
 
-.nav2 {
-	flex: 1 100%;
-	margin: 30px 30px 0 10px;
-	background-color: #FFB4B0;
-	box-sizing: border-box;
-
-	/*position: fixed;*/
-	width: 100%;
-	visibility: hidden;
-
-}
-
-.nav * {
+#topbar ul {
 	list-style-type: none;
-	display: inline-block;
-	text-decoration: none;
+	padding: 0 0 10px 0;
+	margin: 25px 0 0 0;
 }
 
-.nav-bord {
+#topbar li {
+	display: inline;
+	padding: 0 20px 0 20px;
+	
+}
+
+#bord {
 	border-right: 2px solid black;
 }
 
-.nav a {
-	padding: 0 20px;
+#topbar a {
+	text-decoration: none;
 }
 
+.labels label {
+	margin: 0 0 0 30px;
+}
 
+.labels button {
+	margin: 0 0 0 30px;
+}
 
-
-
-/**************************************
-  Middle Boxes
-**************************************/
-
-.leftColumn{
-	flex-grow: 3;
+#leftColumn {
+	padding: 40px 0 0 80px;
+	width: 300px;
+	height: 500px;
 	background-color: #4DD7FA;
+	margin: 20px 20px 0 60px;
 	border: 3px solid black;
+	float: left;
 	box-sizing: border-box;
-	padding: 40px 0 60px 50px;
-	margin: 0 20px 0 20px;
+}
+
+#rightColumn {
+	width: 814px;
+	height: 500px;
+	background-color: #FEFAC0;
+	float: left;
+	border: 3px solid black;
+	margin: 20px 0 0 0;
 	box-sizing: border-box;
-	
 }
 
 .margBot {
 	margin-bottom: 15px;
 }
 
-#rightColumn {
-	flex-grow: 7;
-	background-color: #FEFAC0;
-	border: 3px solid black;
-	box-sizing: border-box;
-	/*padding: 40px 0 0 40px;*/
-	margin: 0 20px 0 0;
-	box-sizing: border-box;
-	padding: 0 0 0 0;
-	font-size: 1.4em;
-}
-
-#rightColumn :first-child {
-	font-weight: bold;
-}
-
-#rightColumn :nth-child(2n+0) {  /*even*/
-	background-color: #FFF5EE;	 /*SeaShell*/
-}
-
-#rightColumn :nth-child(2n+1) {  /*odd*/
-	background-color: #F5FFFA;   /*MintCream*/
-}
-
-.spread-em {
-	margin: 0 0 0 0;
-	padding: 20px 0 20px 30px;
+.center {
+	margin: 0 auto;
 }
 
 
+#rightColumn{
+	padding: 30px 0 0 80px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.songs li {
+	display: inline;
+	padding: 0 10px 0 10px;
+}
