@@ -22,10 +22,10 @@ $(document).ready(function() {
 ***********************************************/
 
    $(document).on("click", ".clicky",  function(event) {
+   		event.target.parentNode.remove();
+	        console.log(event);
+	        console.log("hear ya clicky");
 
-        console.log(event);
-
-        console.log("hear ya clicky");
 
     });
 
