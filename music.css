@@ -52,7 +52,7 @@ body {
 
 #rightColumn {
 	width: 814px;
-	height: 500px;
+	/*height: 500px;*/
 	background-color: #FEFAC0;
 	float: left;
 	border: 3px solid black;
