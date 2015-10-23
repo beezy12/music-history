@@ -13,26 +13,12 @@
   <form action="form.html" method="POST">
     <div id="topbar">
       <ul>
-        <li id="bord"><a href="index.html">List Music</a></li>
-        <li id="bord"><a href="add.html">Add Music</a></li>
+        <li id="list-music">List Music</li>
+        <li id="add-music">Add Music</li>
       </ul>
-
-      <div class="labels">
-
-        <label for="song-name" >Song Name</label>
-        <input type="text" name="song-name">
-
-        <label for="artist-name" >Artist Name</label>
-        <input type="text" name="artist-name">
-
-        <label for="album-name" >Album Name</label>
-        <input type="text" name="album-name">
-        <br/>
-
-        <button id="add">Add</button>
-      </div>
     </div>
 
+  <div id="bottom-half">
     <div id="leftColumn">
       
       <div class="center">
@@ -99,6 +85,31 @@
   <div id="rightColumn">
 
   </div>
+
+</div>   <!--closing div for bottom-half -->
+
+
+  <!-- add music hidden page -->
+  <div id="enter-music" class="magic">
+    <div class="labels">
+
+        <label for="song-name" >Song Name</label>
+        <input type="text" name="song-name">
+
+        <label for="artist-name" >Artist Name</label>
+        <input type="text" name="artist-name">
+
+        <label for="album-name" >Album Name</label>
+        <input type="text" name="album-name">
+        <br/>
+
+        <button id="add-button">Add</button>
+      </div>
+  </div>
+
+
+
+
 
 <script src="songs.js"></script>
 

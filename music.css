@@ -77,3 +77,33 @@ body {
 	display: inline;
 	padding: 0 10px 0 10px;
 }
+
+
+
+
+.visible {
+	display: block;
+}
+
+
+.magic {
+	display: none;
+}
+
+#enter-music {
+	width: 1135px;
+	height: 500px;
+	background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+

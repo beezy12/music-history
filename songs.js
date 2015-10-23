@@ -43,3 +43,51 @@ for (i = 0; i < songs.length; i++) {
 console.log("Added these songs: ", songs);
 
 mine.innerHTML = output;
+
+// songcontainer.innerHTML = output;
+
+
+
+
+//this is where I added the content to switch between the two pages
+
+var addMusic = document.getElementById("add-music");
+var listMusic = document.getElementById("list-music");
+
+var addButton = document.getElementById("add-button");
+
+var bottomTwo = document.getElementById("bottom-half");
+var musicDiv = document.getElementById("enter-music");
+
+
+
+function addMusicSwitch () {
+       console.log("I hear ya add music button");
+	bottomTwo.classList.add("magic");
+	musicDiv.classList.remove("magic");
+
+	// song-name.value = "";
+	// artist-name.value = "";
+	// album-name.value = "";
+}
+
+addMusic.addEventListener("click", addMusicSwitch);
+
+
+
+function listMusicSwitch () {
+	bottomTwo.classList.remove("magic");
+	musicDiv.classList.add("music");
+}
+
+listMusic.addEventListener("click", listMusicSwitch);
+  
+
+
+
+
+
+
+
+
+
