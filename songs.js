@@ -5,23 +5,54 @@ $(document).ready(function() {
 	var output = "";
 	var dash = "";
 	var rightColumn = $("#rightColumn");
+	
+
+
+// function Song(artist, album, name) {          //constructor function
+// 	this.artist = artist;
+// 	this.name = name;
+// 	this.album = album;
+// }
+
+// var song = new Song("Will Smith", "Willinium", "Gittin Jiggy Wit It");       //makes an object
+// console.log(song)
 
 /**********************************************
  AJAX stuff here
 ***********************************************/
 
-function functionIWantToExecute(songList) {
+   $(document).on("click", ".clicky",  function(event) {
+
+        console.log(event);
+
+        console.log("hear ya clicky");
+
+    });
+
+function imCallingYou(songList) {
     console.log(songList.songs);
+    // songPopulator();
+
+	// function songPopulator(songList) {
+	// 	output = "";
 
     for (var i = 0; i < songList.songs.length; i++) {
-      var currentSong = songList.songs[i];
-      $("#rightColumn").append("<h2>" + currentSong.title + "</h2>");
-      $("#rightColumn").append("<div>" + currentSong.artist + "</div>");
-      $("#rightColumn").append("<div> from the album: " + currentSong.album + "</div")
+      	var currentSong = songList.songs[i];
+      	console.log("current song is ", currentSong);
+		var elementString = "<div><h2>" + currentSong.title + "</h2>"
+		    elementString += "<p>" + currentSong.artist + " -- from the album: " + currentSong.album + "</p>"
+		    elementString += "<button class='clicky'>" + "Click me to clear song" + "</button></div>"
+
+		$('#rightColumn').append(elementString);
     }
 }
 
 
+
+   // $(".clicky").click(function(event) {
+   // 	event.preventDefault();
+   // 	$(this).parent().remove();
+   // })
 
 
   $.ajax({
@@ -31,7 +62,7 @@ function functionIWantToExecute(songList) {
     // it reads the contents, and then executes whatever function
     // that you specify here in the done() method, and passes in
     // the contents of the file as the first argument.
-    functionIWantToExecute(contentsOfTheFile);
+    imCallingYou(contentsOfTheFile);
     console.log("the contents of songs.json");
     console.log(contentsOfTheFile);
   });
@@ -67,9 +98,15 @@ function functionIWantToExecute(songList) {
 	  
 	addButton.click(function(event) {
 		
-		var songTotal = songInput.val() + " by " + artistInput.val() + " on the album " + albumInput.val();
-		songs.push(songTotal);
-		songPopulator();
+		var songTotal = {"songs": [{
+	      "title":  songInput.val(),
+	      "artist": artistInput.val(),
+	      "album": albumInput.val()
+	    }]};
+	    console.log(songTotal)
+  //   ,}songInput.val() + " by " + artistInput.val() + " on the album " + albumInput.val();
+		// songs.push(songTotal);
+		imCallingYou(songTotal);
 	});
 
 

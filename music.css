@@ -70,7 +70,7 @@ body {
 
 
 #rightColumn{
-	padding: 30px 0 0 80px;
+	padding: 30px 0 0 0;
 }
 
 .songs li {
@@ -97,6 +97,14 @@ body {
 }
 
 
+
+.colors :nth-child(2n+0) {  /*even*/
+	background-color: #FFF5EE;	 /*SeaShell*/
+}
+
+.colors :nth-child(2n+1) {  /*odd*/
+	background-color: #F5FFFA;   /*MintCream*/
+}
 
 
 
