@@ -16,6 +16,8 @@ songs.push("Don't Let Me Down > by The Beatles on the album Let It Be");
 songs.unshift("Vogue > by Madonna on the album Im Dirty");
 
 
+function songPopulator() {
+	output = "";
 
 for (i = 0; i < songs.length; i++) {
 	songs[i] = songs[i].replace("*", "");
@@ -44,8 +46,9 @@ console.log("Added these songs: ", songs);
 
 mine.innerHTML = output;
 
+}
 // songcontainer.innerHTML = output;
-
+songPopulator();
 
 
 
@@ -61,30 +64,30 @@ var musicDiv = document.getElementById("enter-music");
 
 
 
-function addMusicSwitch () {
-       console.log("I hear ya add music button");
+             //before I was saying click and then calling a function, but here I am doing it all in one place
+addMusic.addEventListener("click", function(event) {
 	bottomTwo.classList.add("magic");
 	musicDiv.classList.remove("magic");
-
-	// song-name.value = "";
-	// artist-name.value = "";
-	// album-name.value = "";
-}
-
-addMusic.addEventListener("click", addMusicSwitch);
+});
 
 
-
-function listMusicSwitch () {
+listMusic.addEventListener("click", function(event) {
+	musicDiv.classList.add("magic");
 	bottomTwo.classList.remove("magic");
-	musicDiv.classList.add("music");
-}
+});
 
-listMusic.addEventListener("click", listMusicSwitch);
   
+addButton.addEventListener("click", function(event) {
+	
+	var songTotal = songInput.value + " by " + artistInput.value + " on the album " + albumInput.value;
+	songs.push(songTotal);
+	songPopulator();
+});
 
 
-
+var songInput = document.getElementById("song-grab");
+var artistInput = document.getElementById("artist-grab");
+var albumInput = document.getElementById("album-grab");
 
 
 
