@@ -1,0 +1,20 @@
+{
+  "name": "musichistory",
+  "version": "5.0.0",
+  "authors": [
+    "NSS Student <student@nashvillesoftwareschool.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.20"
+  }
+}

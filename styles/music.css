@@ -1,0 +1,148 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Oswald, Montserrat, sans-serif;
+	background-image: url("http://41.media.tumblr.com/42ae7e3b0d084c00b0f1c52cc8542ab8/tumblr_n6uyqxaik81twdbcpo6_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/**************************************************************
+    NAVBAR
+**************************************************************/
+
+.dropdown-menu li{
+	padding: 5px 0 0 20px;
+}
+
+.blue {
+	background-color: #6EDBFF;
+}
+
+.bee {		/* for the B glyphicon */
+	font-size: 1.8em;
+	margin: 12px 40px 0 30px;
+}
+
+/**************************************************************
+    BOTTOM HALF
+**************************************************************/
+
+#bottom-half {
+	margin: 20px 0 0 0;
+}
+
+
+/**************************************************************
+    LEFT COLUMN
+**************************************************************/
+
+.lefty {
+	opacity: 0.8;
+	background-color: #6EDBFF;
+	padding: 40px;
+	border-radius: 0 0 20px 20px;
+}
+
+
+/**************************************************************
+    RIGHT COLUMN
+**************************************************************/
+
+.righty {
+	opacity: 0.8;
+	background-color: #6EDBFF;
+	border-radius: 0 0 20px 20px;
+	padding: 40px;
+}
+
+
+/**************************************************************
+    ADD MUSIC PAGE
+**************************************************************/
+
+.enter-music {
+	width: 1135px;
+	height: 500px;
+	background-color: #6EDBFF
+	margin: 20px 20px 0 60px;
+	opacity: 0.8;
+}
+
+.labels label {
+	margin: 0 0 0 30px;
+}
+
+.labels button {
+	margin: 0 0 0 30px;
+}
+
+
+
+/**************************************************************
+    MAGIC
+**************************************************************/
+
+.visible {
+	display: block;
+}
+
+
+.magic {
+	display: none;
+}
+
+
+/**************************************************************
+    RANDOM STYLING
+**************************************************************/
+
+
+.margBot {                      /* adds some margin to the bottom of elements */
+	margin-bottom: 15px;
+}
+
+
+.labels input {             /* stacks the input labels for the add music page */
+	display: block;
+}
+
+.centered {               /* centers EXACTLY in the middle of the div. Got it from css tricks.com */
+  position: fixed;            
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+
+.songs li {				    /*  ?????? */
+	display: inline;  
+	padding: 0 10px 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var currentSongs = [];
 	var output = "";
 	var dash = "";
-	var rightColumn = $("#rightColumn");
+	var rightColumn = $(".righty");
 	
 
 
@@ -39,11 +39,11 @@ function imCallingYou(songList) {
     for (var i = 0; i < songList.songs.length; i++) {
       	var currentSong = songList.songs[i];
       	console.log("current song is ", currentSong);
-		var elementString = "<div><h2>" + currentSong.title + "</h2>"
-		    elementString += "<p>" + currentSong.artist + " -- from the album: " + currentSong.album + "</p>"
-		    elementString += "<button class='clicky'>" + "Click me to clear song" + "</button></div>"
+		var elementString = "<div><h3>" + currentSong.title + "</h3>";
+		    elementString += "<p>" + currentSong.artist + " -- from the album: " + currentSong.album + "</p>";
+		    elementString += "<button class='clicky'>" + "Click me to clear song" + "</button></div>";
 
-		$('#rightColumn').append(elementString);
+		$('.righty').append(elementString);
     }
 }
 
@@ -65,11 +65,13 @@ function imCallingYou(songList) {
     imCallingYou(contentsOfTheFile);
     console.log("the contents of songs.json");
     console.log(contentsOfTheFile);
+
   });
 	
 
 
-/**********************************************
+/*************************************************
+     MAGIC
 *************************************************/
 	//this is where I added the content to switch between the two pages
 
@@ -79,7 +81,7 @@ function imCallingYou(songList) {
 	var addButton = $("#add-button");
 
 	var bottomTwo = $("#bottom-half");
-	var musicDiv = $("#enter-music");
+	var musicDiv = $(".enter-music");
 
 
 
@@ -103,7 +105,7 @@ function imCallingYou(songList) {
 	      "artist": artistInput.val(),
 	      "album": albumInput.val()
 	    }]};
-	    console.log(songTotal)
+	    console.log(songTotal);
   //   ,}songInput.val() + " by " + artistInput.val() + " on the album " + albumInput.val();
 		// songs.push(songTotal);
 		imCallingYou(songTotal);
