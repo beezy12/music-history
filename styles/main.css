@@ -1,52 +1,101 @@
-/*
-Error: File to import not found or unreadable: nav.
-        on line 2 of ../sass/main.scss
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Oswald, Montserrat, sans-serif;
+  background-image: url("http://41.media.tumblr.com/42ae7e3b0d084c00b0f1c52cc8542ab8/tumblr_n6uyqxaik81twdbcpo6_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-1: 
-2: @import "nav";
-3: 
-4: 
-5: $font-stack:    Helvetica, sans-serif;
-6: $primary-color: #333;
-7: 
+/**************************************************************
+    NAVBAR
+**************************************************************/
+.dropdown-menu li {
+  padding: 5px 0 0 20px; }
 
-Backtrace:
-../sass/main.scss:2
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
-/usr/local/lib/ruby/gems/1.9.1/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:19:in `load'
-/usr/local/bin/sass:19:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: nav.\A         on line 2 of ../sass/main.scss\A \A 1: \A 2: @import \"nav\";\A 3: \A 4: \A 5: $font-stack:    Helvetica, sans-serif;\A 6: $primary-color: #333;\A 7: "; }
+.blue {
+  background-color: #6EDBFF; }
+
+.bee {
+  /* for the B glyphicon */
+  font-size: 1.8em;
+  margin: 12px 40px 0 30px; }
+
+/**************************************************************
+    BOTTOM HALF
+**************************************************************/
+#bottom-half {
+  margin: 20px 0 0 0; }
+
+/**************************************************************
+    LEFT COLUMN
+**************************************************************/
+.lefty {
+  opacity: 0.8;
+  background-color: #6EDBFF; }
+
+/**************************************************************
+    RIGHT COLUMN
+**************************************************************/
+.righty {
+  opacity: 0.8;
+  background-color: #6EDBFF; }
+
+/**************************************************************
+    ADD MUSIC PAGE
+**************************************************************/
+.enter-music {
+  width: 1135px;
+  height: 500px;
+  background-color: #6EDBFF;
+  margin: 20px 20px 0 60px;
+  opacity: 0.8; }
+
+.labels label {
+  margin: 0 0 0 30px; }
+
+.labels button {
+  margin: 0 0 0 30px; }
+
+/**************************************************************
+    MAGIC
+**************************************************************/
+.visible {
+  display: block; }
+
+.magic {
+  display: none; }
+
+/**************************************************************
+    RANDOM STYLING
+**************************************************************/
+/***********SASS******************/
+.lefty, .righty {
+  border-radius: 0 0 15px 15px;
+  border: 3px solid springgreen; }
+
+.lefty, .righty {
+  padding: 40px; }
+
+/************************************/
+.margBot {
+  /* adds some margin to the bottom of elements */
+  margin-bottom: 15px; }
+
+.labels input {
+  /* stacks the input labels for the add music page */
+  display: block; }
+
+.centered {
+  /* centers EXACTLY in the middle of the div. Got it from css tricks.com */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%); }
+
+.songs li {
+  /*  ?????? */
+  display: inline;
+  padding: 0 10px 0 10px; }
+
+/*# sourceMappingURL=main.css.map */

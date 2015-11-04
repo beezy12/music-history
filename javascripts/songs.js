@@ -39,7 +39,7 @@ function imCallingYou(songList) {
     for (var i = 0; i < songList.songs.length; i++) {
       	var currentSong = songList.songs[i];
       	console.log("current song is ", currentSong);
-		var elementString = "<div><h3>" + currentSong.title + "</h3>";
+		var elementString = "<divbrew install gnupg gnupg2><h3>" + currentSong.title + "</h3>";
 		    elementString += "<p>" + currentSong.artist + " -- from the album: " + currentSong.album + "</p>";
 		    elementString += "<button class='clicky'>" + "Click me to clear song" + "</button></div>";
 
