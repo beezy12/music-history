@@ -7,13 +7,33 @@ body {
   background-size: cover; }
 
 /**************************************************************
+                    SASS
+**************************************************************/
+/************************************************************************/
+.lefty, .righty, .enter-music {
+  border-radius: 0 0 15px 15px;
+  border: 3px solid springgreen; }
+
+.lefty, .righty {
+  padding: 40px; }
+
+.blue, .lefty, .righty, .enter-music {
+  background-color: #6EDBFF;
+  opacity: 0.8; }
+
+.labels label {
+  margin: 0 0 10px 0; }
+.labels button {
+  margin: 0 0 0 15px; }
+.labels input {
+  margin: 0 0 30px 0; }
+
+/***********************************************************************/
+/**************************************************************
     NAVBAR
 **************************************************************/
 .dropdown-menu li {
   padding: 5px 0 0 20px; }
-
-.blue {
-  background-color: #6EDBFF; }
 
 .bee {
   /* for the B glyphicon */
@@ -24,37 +44,24 @@ body {
     BOTTOM HALF
 **************************************************************/
 #bottom-half {
-  margin: 20px 0 0 0; }
+  margin: 40px 0 0 0; }
 
 /**************************************************************
     LEFT COLUMN
 **************************************************************/
-.lefty {
-  opacity: 0.8;
-  background-color: #6EDBFF; }
-
 /**************************************************************
     RIGHT COLUMN
 **************************************************************/
-.righty {
-  opacity: 0.8;
-  background-color: #6EDBFF; }
-
 /**************************************************************
     ADD MUSIC PAGE
 **************************************************************/
 .enter-music {
   width: 1135px;
   height: 500px;
-  background-color: #6EDBFF;
-  margin: 20px 20px 0 60px;
-  opacity: 0.8; }
-
-.labels label {
-  margin: 0 0 0 30px; }
+  margin: 20px 20px 0 60px; }
 
 .labels button {
-  margin: 0 0 0 30px; }
+  width: 100px; }
 
 /**************************************************************
     MAGIC
@@ -68,15 +75,6 @@ body {
 /**************************************************************
     RANDOM STYLING
 **************************************************************/
-/***********SASS******************/
-.lefty, .righty {
-  border-radius: 0 0 15px 15px;
-  border: 3px solid springgreen; }
-
-.lefty, .righty {
-  padding: 40px; }
-
-/************************************/
 .margBot {
   /* adds some margin to the bottom of elements */
   margin-bottom: 15px; }
