@@ -87,6 +87,11 @@ $primary-color: springgreen;
     NAVBAR
 **************************************************************/
 
+.blue {
+	z-index: 1;
+}
+
+
 .dropdown-menu li{
 	padding: 5px 0 0 20px;
 }
@@ -104,9 +109,9 @@ $primary-color: springgreen;
     BOTTOM HALF
 **************************************************************/
 
-#bottom-half {
-	margin: 40px 0 0 0;
-}
+// #bottom-half {
+// 	margin: 40px 0 0 0;
+// }
 
 
 /**************************************************************

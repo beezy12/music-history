@@ -1,8 +1,5 @@
 define(["jquery"], function($) {
 	
-console.log("this is populate-songs");
-
-
 
 		return {
 
@@ -10,10 +7,8 @@ console.log("this is populate-songs");
 				$.ajax({
 				    url: "data/songs.json"
 						}).done(callback);
-
+				
 			}
 
 		};
 });
-
-
