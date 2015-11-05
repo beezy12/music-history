@@ -1,4 +1,5 @@
-define(["jquery", "populate-songs"], function($, populateSongs) {
+define(["jquery", "populate-songs", "get-more-songs", "hbs"], 
+	function($, populateSongs, getMoreSongs, hbs) {
 
 
 console.log("this is songs.js");
@@ -24,25 +25,26 @@ console.log("this is songs.js");
 
 		//this listens for a click on the delete buttons and removes the song when clicked
 		$(document).on("click", ".clicky",  function(event) {
-				event.target.parentNode.remove();
-		        console.log(event);
-		        console.log("hear ya clicky");
+			event.target.previousElementSibling.remove();
+			event.target.remove();
+	        console.log(event.target.previousElementSibling);
+	        console.log("hear ya clicky");
 		});
 
 
 		function imCallingYou(songList) {
-		    for (var i = 0; i < songList.songs.length; i++) {
-		      	var currentSong = songList.songs[i];
-		      	console.log("current song is ", currentSong);
-				var elementString = "<div><h3>" + currentSong.title + "</h3>";
-				    elementString += "<p>" + currentSong.artist + " -- from the album: " + currentSong.album + "</p>";
-				    elementString += "<button class='clicky'>" + "Click me to clear song" + "</button></div>";
-
-				$('.righty').append(elementString);
-		    }
+			require(['hbs!../templates/songs'], function(songTemplate) {
+				$("#songBox").append(songTemplate(songList));
+			});
 		}
 
 		populateSongs.goGetData(imCallingYou);
+		
+
+		$("#pushIt").click(function() {
+			getMoreSongs.goGetData(imCallingYou);
+		});
+			
 
 
 
