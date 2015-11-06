@@ -15,9 +15,77 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Oswald, Montserrat, sans-serif;
-	background-image: url("http://41.media.tumblr.com/42ae7e3b0d084c00b0f1c52cc8542ab8/tumblr_n6uyqxaik81twdbcpo6_1280.jpg");
+	background-image: url("https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?dpr=2&fit=crop&fm=jpg&h=725&ixlib=rb-0.3.5&q=50&w=1300");
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+// .box {
+
+//   -webkit-transition: background-color 2s ease-out;
+//   -moz-transition: background-color 2s ease-out;
+//   -o-transition: background-color 2s ease-out;
+//   transition: background-color 2s ease-out;
+// }
+
+// .box:hover {
+//   background-color: green;
+//   cursor: pointer;
+// }
+
+
+// .box {
+//     background: #2db34a;
+//     border-radius: 6px;
+//     transition-property: background, border-radius;
+//     transition-duration: 1s;
+//     transition-timing-function: linear;
+//   }
+
+//   .box:hover {
+//     background: #ff7b29;
+//     border-radius: 50%;
+//   }
+
+
+//   .box {
+//     border-style: solid;
+//     border-width: 1px;
+//     display: block;
+//     // width: 100px;
+//     // height: 100px;
+//     background-color: #0000FF;
+//     -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+//     transition: width 2s, height 2s, background-color 2s, transform 2s;
+// }
+
+// .box:hover {
+//     background-color: #FFCCCC;
+//     // width: 200px;
+//     // height: 200px;
+//     -webkit-transform: rotate(180deg);
+//     transform: rotate(360deg);
+// }
+
+
+ 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity: 0.6; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity: 0.6; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity: 0.6; } }
+ 
+.box {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
 }
 
 
@@ -30,13 +98,20 @@ body {
 $primary-color: springgreen;
 
 
-@mixin set-border($radius, $size, $type: solid) {
+@mixin set-border($radius) {
 	border-radius: $radius;
-	border: $size $type $primary-color;
 }
 
-.lefty, .righty, .enter-music {
-	@include set-border(0 0 15px 15px, 3px, solid);
+.lefty {
+	@include set-border(0 25px 25px 0);
+}
+
+.righty {
+	@include set-border(25px 0 0 25px);
+}
+
+.enter-music {
+	@include set-border(0 0 25px 25px);
 }
 
 
@@ -49,7 +124,9 @@ $primary-color: springgreen;
 	@include set-padding(40px);
 }
 
-
+.container-fluid {
+	@include set-padding(0);
+}
 
 @mixin set-background-color($color, $opac) {
 	background-color: $color;
@@ -76,6 +153,10 @@ $primary-color: springgreen;
 	input {
 		@include set-margin(0 0 30px 0);
 	}
+}
+
+.lefty {
+	@include set-margin(0 0 30 0);
 }
 
 /***********************************************************************/
@@ -109,9 +190,9 @@ $primary-color: springgreen;
     BOTTOM HALF
 **************************************************************/
 
-// #bottom-half {
-// 	margin: 40px 0 0 0;
-// }
+.bottom-half {
+	margin: 40px 0 0 0;
+}
 
 
 /**************************************************************
@@ -125,8 +206,9 @@ $primary-color: springgreen;
     RIGHT COLUMN
 **************************************************************/
 
-
-
+// .righty {
+// 	margin: 0 50px 0 0;
+// }
 
 /**************************************************************
     ADD MUSIC PAGE
@@ -136,12 +218,19 @@ $primary-color: springgreen;
 	width: 1135px;
 	height: 500px;
 	margin: 20px 20px 0 60px;
+	-webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
 
+}
+.labels label {
+	font-size: 1.8em;
 }
 
 .labels button {
 	width: 100px;
 }
+
+
 
 /**************************************************************
     MAGIC
@@ -161,9 +250,14 @@ $primary-color: springgreen;
     RANDOM STYLING
 **************************************************************/
 
+.btn button {
+	border: none;
+}
 
-  
-
+.clicky {
+	margin: 0 0 0 25px;
+	padding: 0 5px;
+}
 
 
 .margBot {                      /* adds some margin to the bottom of elements */
@@ -192,10 +286,13 @@ $primary-color: springgreen;
 
 
 
+#song-grab, #artist-grab, #album-grab {
+	font-size: 1.5em;
+}
 
-
-
-
+#pushIt {
+	margin: 35px 0 0 150px;
+}
 
 
 

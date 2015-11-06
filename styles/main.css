@@ -2,20 +2,58 @@ body {
   margin: 0;
   padding: 0;
   font-family: Oswald, Montserrat, sans-serif;
-  background-image: url("http://41.media.tumblr.com/42ae7e3b0d084c00b0f1c52cc8542ab8/tumblr_n6uyqxaik81twdbcpo6_1280.jpg");
+  background-image: url("https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?dpr=2&fit=crop&fm=jpg&h=725&ixlib=rb-0.3.5&q=50&w=1300");
   background-repeat: no-repeat;
   background-size: cover; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.6; } }
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.6; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.6; } }
+.box {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
 
 /**************************************************************
                     SASS
 **************************************************************/
 /************************************************************************/
-.lefty, .righty, .enter-music {
-  border-radius: 0 0 15px 15px;
-  border: 3px solid springgreen; }
+.lefty {
+  border-radius: 0 25px 25px 0; }
+
+.righty {
+  border-radius: 25px 0 0 25px; }
+
+.enter-music {
+  border-radius: 0 0 25px 25px; }
 
 .lefty, .righty {
   padding: 40px; }
+
+.container-fluid {
+  padding: 0; }
 
 .blue, .lefty, .righty, .enter-music {
   background-color: #6EDBFF;
@@ -27,6 +65,9 @@ body {
   margin: 0 0 0 15px; }
 .labels input {
   margin: 0 0 30px 0; }
+
+.lefty {
+  margin: 0 0 30 0; }
 
 /***********************************************************************/
 /**************************************************************
@@ -46,6 +87,9 @@ body {
 /**************************************************************
     BOTTOM HALF
 **************************************************************/
+.bottom-half {
+  margin: 40px 0 0 0; }
+
 /**************************************************************
     LEFT COLUMN
 **************************************************************/
@@ -58,7 +102,12 @@ body {
 .enter-music {
   width: 1135px;
   height: 500px;
-  margin: 20px 20px 0 60px; }
+  margin: 20px 20px 0 60px;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s; }
+
+.labels label {
+  font-size: 1.8em; }
 
 .labels button {
   width: 100px; }
@@ -75,6 +124,13 @@ body {
 /**************************************************************
     RANDOM STYLING
 **************************************************************/
+.btn button {
+  border: none; }
+
+.clicky {
+  margin: 0 0 0 25px;
+  padding: 0 5px; }
+
 .margBot {
   /* adds some margin to the bottom of elements */
   margin-bottom: 15px; }
@@ -95,5 +151,11 @@ body {
   /*  ?????? */
   display: inline;
   padding: 0 10px 0 10px; }
+
+#song-grab, #artist-grab, #album-grab {
+  font-size: 1.5em; }
+
+#pushIt {
+  margin: 35px 0 0 150px; }
 
 /*# sourceMappingURL=main.css.map */

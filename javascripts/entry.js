@@ -29,7 +29,7 @@ require(["bootstrapJs", "songs"],    // always need these    // bootstrapJS here
 		// populateSongs.goGetData(imCallingYou);
 
 		
-	console.log("hello? can you hear me?");
+	console.log("can you hear me? My name is entry");
 });
 
 
