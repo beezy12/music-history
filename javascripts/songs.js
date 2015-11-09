@@ -1,5 +1,5 @@
-define(["jquery", "populate-songs", "get-more-songs", "hbs"], 
-	function($, populateSongs, getMoreSongs, hbs) {
+define(["jquery", "populate-songs", "hbs", "add-some-songs"], 
+	function($, populateSongs, hbs, addSomeSongs) {
 
 
 console.log("this is songs.js");
@@ -23,28 +23,66 @@ console.log("this is songs.js");
 		var albumInput = $("#album-grab");
 		
 
+		populateSongs.goGetData(imCallingYou);
+		// leftsidePopulator.goGetData(populateLeft);
 		
+		  // **** songList here is the actual JSON 
 		function imCallingYou(songList) {
 			require(['hbs!../templates/songs'], function(songTemplate) {
 				$("#songBox").append(songTemplate(songList));
 			});
 		}
 
-		populateSongs.goGetData(imCallingYou);
+		// $("#pushIt").click(function() {
+		// 	getMoreSongs.goGetData(imCallingYou);
+		// });
+
+
+
+		// populate left column
+		// function populateLeft(populate) {
+		// 	require(['hbs!../templates/songs'], function(whatTemplate) {
+		// 		$("artist").append(whatTemplate(populate));
+		// 	});
+		// }
 		
 
-		$("#pushIt").click(function() {
-			getMoreSongs.goGetData(imCallingYou);
-		});
 			
 
 		//this listens for a click on the delete buttons and removes the song when clicked
 		$(document).on("click", ".clicky",  function(event) {
 			event.target.parentNode.remove();    // Lucas had used previousElementSibling, until I moved the delete button inside the div
-			event.target.remove();
+			// event.target.remove();
 		});
 
 
+		// function clearInput() {
+		// 	$("#song-grab").val("");
+		// 	$("#artist-grab").val("");
+		// 	$("#album-grab").val("");
+		// }
+
+
+		// button on the add music page that submits user's input
+		// addButton.click(function(event) {
+		// 	var songTotal = {"songs": [{
+		//       "title":  songInput.val(),
+		//       "artist": artistInput.val(),
+		//       "album": albumInput.val()
+		//     }]};
+
+		// 	imCallingYou(songTotal);
+
+		// 	clearInput();
+
+		// 	//switches back to the list music page when the add music button is clicked
+		// 	musicDiv.hide();    
+		// 	bottomTwo.show();
+		// });
+
+
+
+		
 		
 
 		addMusic.click(function(event) {
@@ -58,30 +96,9 @@ console.log("this is songs.js");
 			bottomTwo.show();
 		});
 
-		function clearInput() {
-			$("#song-grab").val("");
-			$("#artist-grab").val("");
-			$("#album-grab").val("");
-		}
 
-		addButton.click(function(event) {
-			
-			var songTotal = {"songs": [{
-		      "title":  songInput.val(),
-		      "artist": artistInput.val(),
-		      "album": albumInput.val()
-		    }]};
-
-			imCallingYou(songTotal);
-
-			clearInput();
-
-			//switches back to the list music page when the add music button is clicked
-			musicDiv.hide();    
-			bottomTwo.show();
 			
 				
-		});
 			
 
 		
@@ -104,3 +121,4 @@ console.log("this is songs.js");
 
 
 
+			

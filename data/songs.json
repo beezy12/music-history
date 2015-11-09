@@ -1,31 +1,45 @@
 {
-  "songs": [
-    {
-      "title": "Tell Me Why",
-      "artist": "Neil Young",
-      "album": "After The Gold Rush"      
-    },
-    {
-      "title": "Myxomatosis",
-      "artist": "Radiohead",
-      "album": "Hail To The Thief"
-    },
-    {
-      "title": "Happiness Is A Warm Gun",
-      "artist": "Beatles",
-      "album": "The White Album"      
-    },
-    {
-      "title": "Goodbye Blue Sky",
-      "artist": "Pink Floyd",
-      "album": "The Wall"      
-    },
-    {
-      "title": "Over and Over",
-      "artist": "Hot Chip",
-      "album": "Coming On Strong"      
+  "songs": {
+        "tellMe": {
+          "title": "Tell Me Why",
+          "artist": "Neil Young",
+          "album": "After The Gold Rush"      
+        },
+        "myxo": {
+          "title": "Myxomatosis",
+          "artist": "Radiohead",
+          "album": "Hail To The Thief"
+        },
+        "gun": {
+          "title": "Happiness Is A Warm Gun",
+          "artist": "The Beatles",
+          "album": "The White Album"      
+        },
+        "sky": {
+          "title": "Goodbye Blue Sky",
+          "artist": "Pink Floyd",
+          "album": "The Wall"      
+        },
+        "over": {
+          "title": "Over and Over",
+          "artist": "Hot Chip",
+          "album": "Coming On Strong"      
+        },
+        "reptile": {
+          "title": "Reptile",
+          "artist": "Nine Inch Nails",
+          "album": "Downward Spiral"
+        },
+        "stacks": {
+          "title": "Stacks",
+          "artist": "Bon Iver",
+          "album": "For Emma"      
+        }
     }
-  ]
 }
+
+
+
+
     
     
