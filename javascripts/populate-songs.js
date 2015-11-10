@@ -7,12 +7,12 @@ console.log("this is populate-songs");
 			goGetData: function(callback) {
 				$.ajax({
 				    url: "https://glaring-fire-4247.firebaseio.com/.json"
-				  
 				}).done(callback);
-
 			}
-
 		};
 });
 
 
+
+
+				  

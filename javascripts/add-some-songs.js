@@ -2,16 +2,13 @@ define(["jquery"], function($) {
 console.log("this is add-some-songs");	
 	$("#add-button").click(function(e) {
 
-
-
-
-
-
 		var newSong = {
-			name: $("song-grab").val(),
-			artist: $("artist-grab").val(),
-			album: $("album-grab").val()
+			name: $("#song-grab").val(),
+			artist: $("#artist-grab").val(),
+			album: $("#album-grab").val()
 		}; 
+
+		console.log(newSong);
 		
 		$.ajax({
 			url: "https://glaring-fire-4247.firebaseio.com/songs.json",
@@ -38,8 +35,12 @@ console.log("this is add-some-songs");
 			console.log("your new song is :", addedSong);
 		});
 				   
-		
-
 	});
 
 });
+		
+
+
+
+
+

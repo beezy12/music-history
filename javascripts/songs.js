@@ -2,14 +2,10 @@ define(["jquery", "populate-songs", "hbs", "add-some-songs"],
 	function($, populateSongs, hbs, addSomeSongs) {
 
 
-console.log("this is songs.js");
-
-
 
 		var songs = [];
-		var currentSongs = [];
+		// var currentSongs = [];
 		var output = "";
-		var dash = "";
 		var rightColumn = $(".righty");
 
 		var addMusic = $("#add-music");
@@ -23,28 +19,34 @@ console.log("this is songs.js");
 		var albumInput = $("#album-grab");
 		
 
-		populateSongs.goGetData(imCallingYou);
-		// leftsidePopulator.goGetData(populateLeft);
-		
-		  // **** songList here is the actual JSON 
-		function imCallingYou(songList) {
+		populateSongs.goGetData(getMeData);
+		populateSongs.goGetData(populateField);
+		  
+		  /**** songList here is the actual JSON data itself. When it gets run thru the ajax file, it
+		        essentially just attaches the JSON data as the argument for the getMeData function, and then
+		        this handlebars function runs, which uses the template I made as it's argument. Then it appends
+		        the template (which is songTemplate), which uses the JSON data as it's argument (songList), and
+		        outputs it to the #songbox div....which is the right column on the music page.
+		        */
+
+		function getMeData(songList) {
 			require(['hbs!../templates/songs'], function(songTemplate) {
 				$("#songBox").append(songTemplate(songList));
 			});
 		}
+				
+
+		function populateField(artist) {
+		 	require(['hbs!../templates/artist-info-populator'], function(artistTemplate) {
+				$("#music-info").append(artistTemplate(artist));
+		 	});
+		}
+
+
 
 		// $("#pushIt").click(function() {
-		// 	getMoreSongs.goGetData(imCallingYou);
+		// 	getMoreSongs.goGetData(getMeData);
 		// });
-
-
-
-		// populate left column
-		// function populateLeft(populate) {
-		// 	require(['hbs!../templates/songs'], function(whatTemplate) {
-		// 		$("artist").append(whatTemplate(populate));
-		// 	});
-		// }
 		
 
 			
@@ -71,7 +73,7 @@ console.log("this is songs.js");
 		//       "album": albumInput.val()
 		//     }]};
 
-		// 	imCallingYou(songTotal);
+		// 	getMeData(songTotal);
 
 		// 	clearInput();
 
@@ -97,16 +99,16 @@ console.log("this is songs.js");
 		});
 
 
+		// this return returns the only thing it can from this page (this OBJECT)....which is the getMeData function
+	return {								
+		getMeData : getMeData
+	};
+});
 			
 				
 			
 
 		
-		// this return returns the only thing it can from this page (this OBJECT)....which is the imCallingYou function
-	return {								
-		imCallingYou : imCallingYou
-	};
-});
 
 
 

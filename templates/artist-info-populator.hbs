@@ -1,0 +1,21 @@
+<div>
+	<label for="artist">Artist:</label>
+</div>
+<select class="margBot form-control">
+	{{#each songs}}
+		<option>
+			{{artist}}
+		</option>
+	{{/each}}
+</select>
+
+<div>
+	<label for="album">Album:</label>
+</div>
+<select class="margBot form-control">
+	{{#each songs}}
+		<option>
+			{{album}}
+		</option>
+	{{/each}}
+</select>
