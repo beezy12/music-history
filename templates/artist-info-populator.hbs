@@ -1,7 +1,8 @@
 <div>
 	<label for="artist">Artist:</label>
 </div>
-<select class="margBot form-control">
+<select class="select-artist margBot form-control">
+	<option>-select-artist-</option>
 	{{#each songs}}
 		<option>
 			{{artist}}
@@ -12,7 +13,8 @@
 <div>
 	<label for="album">Album:</label>
 </div>
-<select class="margBot form-control">
+<select class="select-album margBot form-control">
+	<option>-select-album-</option>
 	{{#each songs}}
 		<option>
 			{{album}}

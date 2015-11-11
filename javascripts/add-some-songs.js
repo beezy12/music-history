@@ -1,6 +1,9 @@
-define(["jquery", "populate-songs", "refresh", "add-to-select"], function($, populateSongs, refresh, addToSelect) {
-console.log("this is add-some-songs");	
-	
+define(["jquery", "populate-songs", "refresh", "add-to-select"], 
+	function($, populateSongs, refresh, addToSelect) {
+
+	console.log("this is add-some-songs");	
+
+
 	$("#add-button").click(function(e) {
 		var newSong = {
 			title: $("#song-grab").val(),
@@ -8,26 +11,23 @@ console.log("this is add-some-songs");
 			album: $("#album-grab").val()
 		}; 
 
+		console.log("new song variable in add-some-songs", newSong);
 
-		console.log(newSong);
 		
 		$.ajax({
 			url: "https://glaring-fire-4247.firebaseio.com/songs.json",
 			method: "POST",
 			data: JSON.stringify(newSong)
 		}).done(function(addedSong) {
-
+			
 			// clears the select div and the right column div.....
 			$("#songBox").empty();
 			$("#music-info").empty();
 
-			// before these two repopulate everything in those two divs with the updated firebase info
+			// and these two repopulate everything in those two divs with the updated firebase info
 			populateSongs.goGetData(refresh.getMeData);
-			populateSongs.goGetData(addToSelect.populateField);
+			populateSongs.goGetData(addToSelect.getMeData);
 
-			// var addMusic = $("#add-music");
-			// var listMusic = $("#list-music");
-			// var addButton = $("#add-button");
 			var bottomTwo = $(".bottom-half");
 			var musicDiv = $(".enter-music");
 			var songInput = $("#song-grab");
