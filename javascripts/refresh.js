@@ -8,10 +8,10 @@ console.log("this is refresh");
 			require(['hbs!../templates/songs'], function(songTemplate) {
 				$("#songBox").append(songTemplate(songList));
 				
-				console.log("songList", songList);
-				console.log("songList.songs", songList.songs);
-				console.log("songList.songs.myxo", songList.songs.myxo);
-				console.log("songList.songs.myxo.artist", songList.songs.myxo.artist);
+				// console.log("songList", songList);
+				// console.log("songList.songs", songList.songs);
+				// console.log("songList.songs.myxo", songList.songs.myxo);
+				// console.log("songList.songs.myxo.artist = who? ", songList.songs.myxo.artist);
 
 				
 

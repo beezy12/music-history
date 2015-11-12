@@ -1,11 +1,11 @@
 <!-- populates the right column -->
-
-	{{#each songs}}
+	<!-- 'this' here is referring to whatever object is being fed to this template. used to be each songs -->
+	{{#each this}}
 	<div>
 		<h3>{{title}}</h3>
 		by {{artist}} from the album {{album}}
 		
-		<button class="clicky btn btn-default">delete</button>
+		<button id="{{@key}}" class="clicky btn btn-default">delete</button>
 	</div>
 
 	{{/each}}

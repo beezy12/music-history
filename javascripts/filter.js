@@ -9,11 +9,9 @@ define(["jquery"],
 
 				var selectArtist = $(".select-artist");
 				var selectAlbum = $(".select-album");
-				var songMatch = {
-					songs: {}
-				};
+				var songMatch = {};
 
-				var allSongs = songList.songs;
+				var allSongs = songList;
 				console.log("allSongs", allSongs);
 
 
@@ -29,23 +27,23 @@ define(["jquery"],
 					console.log("currentSong.artist", currentSong.artist);
 
 					if (currentSong.artist === selectArtist.val()) {
-						console.log("I found a match");
-						songMatch.songs[songKey] = currentSong;
+						console.log("I found a match for artist");
+						songMatch[songKey] = currentSong;
+						console.log(songMatch);
 					}
 
 					else if (currentSong.album === selectAlbum.val()) {
-						songMatch.songs[songKey] = currentSong;
+						console.log("Ive got a match for album");
+						songMatch[songKey] = currentSong;
 					}
 				}
 
 				console.log("songMatch", songMatch);
 				require(['hbs!../templates/songs'], function(songTemplate) {
 				$("#songBox").html(songTemplate(songMatch));
+				// NOTICE THE .html here. It REPLACES what was in the DOM with whatever comes after
 
 				});
-
-
-
 
 
 
@@ -54,5 +52,12 @@ define(["jquery"],
 		};
 
 });
+
+
+
+
+
+
+
 	
 	

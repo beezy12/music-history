@@ -3,19 +3,20 @@
 </div>
 <select class="select-artist margBot form-control">
 	<option>-select-artist-</option>
-	{{#each songs}}
+	{{#each this}}
 		<option>
 			{{artist}}
 		</option>
 	{{/each}}
 </select>
 
+
 <div>
 	<label for="album">Album:</label>
 </div>
 <select class="select-album margBot form-control">
 	<option>-select-album-</option>
-	{{#each songs}}
+	{{#each this}}
 		<option>
 			{{album}}
 		</option>
