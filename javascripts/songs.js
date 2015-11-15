@@ -2,12 +2,6 @@ define(["jquery", "populate-songs", "hbs", "add-some-songs", "refresh", "add-to-
 	function($, populateSongs, hbs, addSomeSongs, refresh, addToSelect) {
 
 
-
-		// var songs = [];
-		// // var currentSongs = [];
-		// var output = "";
-		// var rightColumn = $(".righty");
-
 		var addMusic = $("#add-music");
 		var listMusic = $("#list-music");
 		var addButton = $("#add-button");
