@@ -1,31 +1,15 @@
 define(["jquery", "refresh", "add-to-select"], function($, refresh, addToSelect) {
 	
-console.log("this is populate-songs");
 
+			// this returns an object that has two keys: goGetData, and giveToSelect....whose values are both functions.
+			// call the key to initiate the function
 		return {
-
-			goGetData: function(data) {
-				// $.ajax({
-				//     url: "https://glaring-fire-4247.firebaseio.com/.json"
-				// }).done(callback);
-			console.log("data", data);
-
-			refresh.getMeData(data);
-			},
-
-
-			giveToSelect: function(data) {
-				console.log("data", data);
-				addToSelect.populateSelect(data);
-			}
-
-			
-
-
-
-
-
-
+				goGetData: function(data) {
+					refresh.getMeData(data);
+				},
+				giveToSelect: function(data) {
+					addToSelect.populateSelect(data);
+				}
 		};
 });
 
@@ -33,3 +17,16 @@ console.log("this is populate-songs");
 
 
 				  
+			
+
+
+
+
+
+
+
+					
+
+
+
+

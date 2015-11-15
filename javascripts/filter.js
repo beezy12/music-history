@@ -12,33 +12,29 @@ define(["jquery"],
 				var songMatch = {};
 
 				var allSongs = songList;
-				console.log("allSongs", allSongs);
+				
 
 
 					// songKey is a string of the key value....so use brackets to access it below
 				for (var songKey in allSongs) {
-					console.log("songKey", songKey);
-					console.log("allSongs[songKey]", allSongs[songKey]);
 
-					// console.log("selectArtist.val", selectArtist.val());
-					// console.log("selectArtist", selectArtist);
-
+					// the for in loop grabs the current song's key, and assigns it to the currentSong variable
 					var currentSong = allSongs[songKey];
 					console.log("currentSong.artist", currentSong.artist);
 
+					// compares the current song's key of artist to whatever was clicked in the artist select 
+					// dropdown, and if there's a match, it assigns that songs info to the empty songMatch object
+					// I declared above.
 					if (currentSong.artist === selectArtist.val()) {
-						console.log("I found a match for artist");
 						songMatch[songKey] = currentSong;
-						console.log(songMatch);
 					}
 
 					else if (currentSong.album === selectAlbum.val()) {
-						console.log("Ive got a match for album");
 						songMatch[songKey] = currentSong;
 					}
 				}
 
-				console.log("songMatch", songMatch);
+				// 
 				require(['hbs!../templates/songs'], function(songTemplate) {
 				$("#songBox").html(songTemplate(songMatch));
 				// NOTICE THE .html here. It REPLACES what was in the DOM with whatever comes after
@@ -61,3 +57,6 @@ define(["jquery"],
 
 	
 	
+						
+						
+						

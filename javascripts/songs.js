@@ -1,8 +1,6 @@
 define(["jquery", "populate-songs", "hbs", "add-some-songs", "refresh", "add-to-select", "filter", "delete-something", "firebase"], 
 	function($, populateSongs, hbs, addSomeSongs, refresh, addToSelect, filter, deleteSomething, firebase) {
 
-		console.log("this is songs");
-
 
 		var addMusic = $("#add-music");
 		var listMusic = $("#list-music");
@@ -51,7 +49,6 @@ define(["jquery", "populate-songs", "hbs", "add-some-songs", "refresh", "add-to-
 
 		// Create a reference to your Firebase database
 		var myFirebaseRef = new Firebase("https://glaring-fire-4247.firebaseio.com/");
-		console.log("myFirebaseRef", myFirebaseRef);
 
 		// Listen for when anything changes on the "songs" key, and start this function.....
 		myFirebaseRef.child("songs").on("value", function(snapshot) {
@@ -62,7 +59,6 @@ define(["jquery", "populate-songs", "hbs", "add-some-songs", "refresh", "add-to-
 
 			// snapshot is the current state of firebase, takes that (val) and stores songs key in a local variable
 			var allSongsObject = snapshot.val();
-			console.log("allSongsObject", allSongsObject);
 
 			
 			// Bind the allSongsObject to the song list Handlebar template

@@ -26,16 +26,16 @@ requirejs.config({
 
 
 
-require(["bootstrapJs", "songs"],    // always need these    // bootstrapJS here is loading the bootstrap javascript
+require(["bootstrapJs", "songs"],    
 	function(bootstrap, songs) { 
 
 
-		// first.goGetData(populateSongs);    // this is from Steve's notes....it's not correct here....but I have pictures.
-
-		// populateSongs.goGetData(imCallingYou);
+		
 
 		
-	console.log("My name is entry");
+
+		
+	
 });
 
 

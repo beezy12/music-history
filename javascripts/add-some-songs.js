@@ -1,7 +1,7 @@
 define(["jquery", "populate-songs", "refresh", "add-to-select"], 
 	function($, populateSongs, refresh, addToSelect) {
 
-	console.log("this is add-some-songs");	
+	
 
 
 	$("#add-button").click(function(e) {
@@ -11,7 +11,7 @@ define(["jquery", "populate-songs", "refresh", "add-to-select"],
 			album: $("#album-grab").val()
 		}; 
 
-		console.log("new song variable in add-some-songs", newSong);
+		
 
 		
 		$.ajax({
@@ -20,7 +20,7 @@ define(["jquery", "populate-songs", "refresh", "add-to-select"],
 			data: JSON.stringify(newSong)
 		}).done(function(addedSong) {
 			
-			// clears the select div and the right column div.....
+			// .empty clears the select div and the right column div.....
 			$("#songBox").empty();
 			$("#music-info").empty();
 
@@ -42,7 +42,7 @@ define(["jquery", "populate-songs", "refresh", "add-to-select"],
 			musicDiv.hide();    
 			bottomTwo.show();
 
-			console.log("your new song is :", addedSong);
+			
 		});
 				   
 	});
