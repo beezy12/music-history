@@ -8,7 +8,23 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+
+
+<body ng-app="MusicApp">
+
+  <!-- <section ng-controller="MusicCtrl">
+    <h1>{{ title }}</h1>
+  </section> -->
+    
+
+  <div ng-view></div>
+
+
+  <section>
+    <a href="/#/songs/list">Song List</a>
+  </section>
+
+
 
     <div id="topbar">
       <ul>
@@ -90,7 +106,7 @@
 
 
   <!-- add music hidden page -->
-  <div id="enter-music" class="magic">
+ <!--  <div id="enter-music" class="magic">
     <div class="labels">
 
         <label for="song-name" >Song Name</label>
@@ -105,13 +121,19 @@
 
         <button id="add-button">Add</button>
       </div>
-  </div>
+  </div> -->
 
 
 
+<script src="lib/bower_components/angular/angular.min.js"></script>
+<script src="lib/bower_components/angular-route/angular-route.js"></script>
 
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="songs.js"></script>
+<!-- <script src="songs.js"></script> -->
+
+<script src="factories/SongStorage.js"></script>
+
+<script src="app/app.js"></script>
+<script src="controllers/songController.js"></script>
 
 </body>
 </html>

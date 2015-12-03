@@ -1,29 +1,35 @@
 {
-  "songs": [
-    {
-      "title": "Legs",
-      "artist": "ZZTop",
-      "album": "Eliminator"
-    },
-    {
-      "title": "The Logical Song",
-      "artist": "Supertramp",
-      "album": "Breakfast in America"      
-    },
-    {
-      "title": "Another Brick In The Wall",
-      "artist": "Pink Floyd",
-      "album": "The Wall"      
-    },
-    {
-      "title": "Welcome To The Jungle",
-      "artist": "Guns & Roses",
-      "album": "Appetite For Destruction"      
-    },
-    {
-      "title": "Ironic",
-      "artist": "Alanis Morrisette",
-      "album": "Jagged Little Pill"      
+  "songs": {
+        "tellMe": {
+          "title": "Tell Me Why",
+          "artist": "Neil Young",
+          "album": "After The Gold Rush"      
+        },
+        "myxo": {
+          "title": "Myxomatosis",
+          "artist": "Radiohead",
+          "album": "Hail To The Thief"
+        },
+        "gun": {
+          "title": "Happiness Is A Warm Gun",
+          "artist": "The Beatles",
+          "album": "The White Album"      
+        },
+        "sky": {
+          "title": "Goodbye Blue Sky",
+          "artist": "Pink Floyd",
+          "album": "The Wall"      
+        },
+        "over": {
+          "title": "Over and Over",
+          "artist": "Hot Chip",
+          "album": "Coming On Strong"      
+        }
     }
-  ]
 }
+
+
+
+
+    
+    

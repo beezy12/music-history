@@ -1,0 +1,29 @@
+{
+  "name": "lib",
+  "homepage": "https://github.com/beezy12/music-history",
+  "authors": [
+    "Brian Stumbaugh <brian.stumbuagh@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "firebase": "~2.3.1",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "require-handlebars-plugin": "~1.0.0",
+    "q": "1.0.1",
+    "requirejs": "~2.1.20",
+    "angular-route": "~1.4.8"
+  }
+}
