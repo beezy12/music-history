@@ -15,8 +15,16 @@ angular
 			templateUrl: 'partials/songForm.html',
 			controller: 'MusicCtrl'
 		})
-		.otherwise('/songs/list');
+		.otherwise('/songs/main');
   }]);
+
+
+	/*  to-do list: 
+
+		- filter button below select dropdowns to filter songs
+		- get 2nd json song info, and concat to first one
+		- 
+
 
 
 

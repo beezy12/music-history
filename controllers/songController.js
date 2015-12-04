@@ -7,7 +7,6 @@ angular
 	
 	simpleSongs.loadSongs().then(
 		function () {
-			
 			$scope.songs = simpleSongs.getSongs();
 			console.log($scope.songs);
 		},
@@ -16,5 +15,6 @@ angular
 		}
 	);
 }]);
+			
 
 
