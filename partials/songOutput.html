@@ -236,7 +236,8 @@
           
           
         <div class="col-md-7 col-md-offset-2 righty box" id="songBox">
-          <p ng-repeat="song in songs">{{ song.title + " by " + song.artist + " on the album " + song.album }}</p>
+          <h3 ng-repeat="song in songs"> {{ song.title }} </h3>
+          <p ng-repeat="song in songs"> {{ " by " + song.artist + " on the album " + song.album }} </p>
         </div>
           
 
@@ -246,7 +247,6 @@
 
   
 
-  <!-- add music hidden page -->
   
             
             

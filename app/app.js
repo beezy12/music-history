@@ -1,5 +1,5 @@
 angular
-	.module("MusicApp", ["ngRoute"])
+	.module("MusicApp", ['firebase', 'ngRoute'])
 	.config(['$routeProvider',
   	function($routeProvider) {
     $routeProvider
