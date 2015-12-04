@@ -32,17 +32,14 @@ angular
       return songPromise;
     },
     getSongs: function() {
-      console.log("Factory returning all songs");
       return song_list;
     },
     getSong: function(name) {
-      console.log("Factory returning single song");
       return song_list.filter(function(song){
         return song.name === name;
       })[0];
     },
     addSong: function(song) {
-      console.log("Added single song to factory");
       song_list.push(song);
       return song_list;
     }

@@ -6,10 +6,6 @@ angular
     	.when('/songs/main', {
     		templateUrl: 'partials/songOutput.html',
     		controller: 'MusicCtrl'
-    	})
-    	.when('/songs/list', {
-        	templateUrl: 'partials/songList.html',
-        	controller: 'MusicCtrl'
 		})
 		.when('/songs/form', {
 			templateUrl: 'partials/songForm.html',
@@ -23,7 +19,10 @@ angular
 
 		- filter button below select dropdowns to filter songs
 		- get 2nd json song info, and concat to first one
-		- 
+		- style with newer look and bootstrap stuff
+		- get delete buttons working for songs
+		- rework promises in factory??? (steve's way doesn't make sense)
+	*/
 
 
 
