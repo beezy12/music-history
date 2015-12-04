@@ -169,7 +169,7 @@
           <label for="artist">Artist:</label>
         </div>
         <div class="margBot">
-          <select id="artist" class="margBot" name="artist" ng-model="artistModel" form-control>
+          <select id="artist" class="margBot form-control" name="artist" ng-model="artistModel">
             <option></option>
             <option ng-repeat="butt in songs"> {{ butt.artist }} </option>
           </select>
@@ -179,7 +179,7 @@
           <label for="albumSelect">Album:</label>
         </div>
         <div class="margBot">
-          <select id="album" class="margBot" name="album" ng-model="albumModel" form-control>
+          <select id="album" class="margBot form-control" name="album" ng-model="albumModel">
             <option></option>
             <option ng-repeat="butt in songs"> {{ butt.album }}</option>
           </select>
