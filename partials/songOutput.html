@@ -1,28 +1,6 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music Page</title>
-  <link rel="stylesheet" type="text/css" href="music.css">
-  <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
-</head>
-
-
-
-<body ng-app="MusicApp">
-
-  <!-- <section ng-controller="MusicCtrl">
-    <h1>{{ title }}</h1>
-  </section> -->
-    
-
-  <div ng-view></div>
-
-
-  <!-- <section>
+<section>
     <a href="/#/songs/list">Song List</a>
-  </section>
+</section>
 
 
 
@@ -93,45 +71,13 @@
           <input type="submit" value="Submit Details"></input>
         </div>
     
-    </div> -->  <!-- closing div for l column -->
+    </div>  <!-- closing div for l column -->
 
   
 
 
-  <!-- <div id="rightColumn" ng-controller="MusicCtrl">
+  <div id="rightColumn">
     <h1 ng-repeat="song in songs">{{ song.title }}</h1>
-  </div> -->
+  </div>
 
-<!-- </div>   closing div for bottom-half  -->
-
-
-  <!-- add music hidden page -->
- <!--  <div id="enter-music" class="magic">
-    <div class="labels">
-
-        <label for="song-name" >Song Name</label>
-        <input type="text" id="song-grab" name="song-name">
-
-        <label for="artist-name" >Artist Name</label>
-        <input type="text" id="artist-grab" name="artist-name">
-
-        <label for="album-name" >Album Name</label>
-        <input type="text" id="album-grab" name="album-name">
-        <br/>
-
-        <button id="add-button">Add</button>
-      </div>
-  </div> -->
-
-
-
-<script src="lib/bower_components/angular/angular.min.js"></script>
-<script src="lib/bower_components/angular-route/angular-route.js"></script>
-
-<!-- <script src="songs.js"></script> -->
-<script src="app/app.js"></script>
-<script src="factories/songStorage.js"></script>
-<script src="controllers/songController.js"></script>
-
-</body>
-</html>
+</div>  <!--   closing div for bottom-half  -->
