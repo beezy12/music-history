@@ -1,14 +1,12 @@
 
-
-
-  <div id="topbar">
+  <!-- <div id="topbar">
     <ul>
       <a href="/#/songs/list">Song List</a>
       <a href="/#/songs/form">Add Music</a>
     </ul>
-  </div>
+  </div> -->
 
-  <div id="bottom-half">
+  <!-- <div id="bottom-half">
     <div id="leftColumn">
       
       <div class="center">
@@ -66,15 +64,190 @@
           <input type="submit" value="Submit Details"></input>
         </div>
     
-    </div>  <!-- closing div for l column -->
+    </div>  --> <!-- closing div for l column -->
 
   
 
 
-  <div id="rightColumn">
+  <!-- <div id="rightColumn">
     <p ng-repeat="song in songs">{{ song.title + " by " + song.artist + " on the album " + song.album }}</p>
-  </div>
+  </div> -->
 
-</div>  <!--   closing div for bottom-half  -->
+<!-- </div>    closing div for bottom-half  -->
+
+
+<!-- ******************************************************************************************************** -->
+
+
+
+<nav class="navbar navbar-default blue box">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <span class="glyphicon glyphicon-bold bee">-BOX </span>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+          <ul>
+            <a href="/#/songs/list">Song List</a>
+            <a href="/#/songs/form">Add Music</a>
+          </ul>
+          
+          <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            ADD / SHOW MUSIC <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li id="list-music">List Music</li>
+                <li id="add-music">Add Music</li>
+              <a href="/#/songs/list">Song List</a>
+              <a href="/#/songs/form">Add Music</a>  
+            </ul>
+          </li> -->
+        </ul>
+
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control search" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default search">Submit</button>
+          
+          <span class="glyphs glyphA glyphicon glyphicon-fast-backward"></span>
+          <!-- <span class="glyphs glyphicon glyphicon-backward"></span> -->
+          <span class="glyphs glyphicon glyphicon-stop"></span>
+          <span class="glyphs glyphicon glyphicon-play"></span>
+          <span class="glyphs glyphicon glyphicon-pause"></span>
+          <!-- <span class="glyphs glyphicon glyphicon-forward"></span> -->
+          <span class="glyphs glyphicon glyphicon-fast-forward"></span>
+        </form>
+
+        
+        <ul class="nav navbar-nav navbar-right">
+          
+          <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">options <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- *********** -->
+
+
+
+
+  <div class="container-fluid">
+    <div class="row bottom-half">
+        <div class="col-md-3 lefty box">
+
+              <div class="center">
+                  <div>
+                    <label for="songLength">Volume:</label>
+                  </div>
+                  <div class="margBot">
+                    <input type="range" class="slider" name="songLength" min="0" max="50" step="0.5" value="25">
+                  </div>
+              </div>
+
+              <form action="form.html" method="POST">
+        <div>
+          <label for="artist">Artist:</label>
+        </div>
+        <div class="margBot">
+          <select id="artist" class="margBot" name="artist" ng-model="artistModel">
+            <option></option>
+            <option ng-repeat="butt in songs"> {{ butt.artist }} </option>
+          </select>
+        </div>
+          
+        <div>
+          <label for="albumSelect">Album:</label>
+        </div>
+        <div class="margBot">
+          <select id="album" class="margBot" name="album" ng-model="albumModel">
+            <option></option>
+            <option ng-repeat="butt in songs"> {{ butt.album }}</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="genre">Genre:</label>
+        </div>
+        <div class="margBot">
+          <table>
+            <tr>
+              <td><input type="checkbox" name="rock" value="rock">Rock</td>
+              <td><input type="checkbox" name="classical" value="classical">Classical</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="pop" value="pop">Pop</td>
+              <td><input type="checkbox" name="jazz" value="jazz">Jazz</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="blues" value="blues">Blues</td>
+              <td><input type="checkbox" name="hip hop" value="hip hop">Hip Hop</td>
+            </tr>
+          </table>
+        </div>
+      </form>
+              
+              <!-- <form action="form.html" method="POST">
+
+                  <div id="music-info">
+                  </div>
+                  
+                  <div>
+                    <label for="genre">Genre:</label>
+                  </div>
+                    <table class="margBot">
+                      <tr>
+                        <td><input type="checkbox" name="rock" value="rock">Rock</td>
+                        <td><input type="checkbox" name="classical" value="classical">Classical</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="pop" value="pop">Pop</td>
+                        <td><input type="checkbox" name="jazz" value="jazz">Jazz</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="blues" value="blues">Blues</td>
+                        <td><input type="checkbox" name="hip hop" value="hip hop">Hip Hop</td>
+                      </tr>
+                    </table>
+              </form> -->
+            <div>
+              <input id="filter-button" type="submit" value="Filter"></input>
+            </div>
+        </div>  <!-- closing div for lefty -->
+          
+          
+        <div class="col-md-7 col-md-offset-2 righty box" id="songBox">
+          <p ng-repeat="song in songs">{{ song.title + " by " + song.artist + " on the album " + song.album }}</p>
+        </div>
+          
+
+    </div>           <!-- closing for row -->
+  </div>      <!-- closing for container-fluid -->
+
+
+  
+
+  <!-- add music hidden page -->
+  
             
             
+

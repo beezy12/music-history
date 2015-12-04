@@ -26,6 +26,14 @@ angular
 
 
 
+	/* to get my page back to normal after I jacked it all up:
+
+		- change name of css file
+		- comment out bootstrap code on songoutput.html and songform.html
+	*/
+
+
+
 
 
 
