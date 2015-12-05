@@ -22,10 +22,8 @@ app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $fireb
 
 
 	// functionality for deleting a song
-	$scope.deleteSong = function() {
-		console.log("hear you delete button");
-		// $scope.songsToDelete.remove({
-		// })
+	$scope.deleteSong = function(butt) {
+		$scope.songs.$remove(butt)
 	} // end of delete function
 	
 }]);

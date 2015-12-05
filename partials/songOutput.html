@@ -237,8 +237,8 @@
           
         <div class="col-md-7 col-md-offset-2 righty box" id="songBox">
           <!-- <h3 ng-repeat="song in songs"> {{ song.title }} </h3> -->
-          <p ng-repeat="song in songs"> {{ song.title + " by " + song.artist + " on the album " + song.album }} 
-            <button ng-click="deleteSong()" type="button">Delete</button>
+          <p ng-repeat="butt in songs"> {{ butt.title + " by " + butt.artist + " on the album " + butt.album }} 
+            <button ng-click="deleteSong(butt)" type="button">Delete</button>
           </p>
         </div>
           
