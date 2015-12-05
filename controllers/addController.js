@@ -1,7 +1,6 @@
 app.controller("addCtrl", ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
 	
 
-
 	var ref = new Firebase("https://glaring-fire-4247.firebaseio.com/songs");
 	$scope.songs = $firebaseArray(ref);
 
@@ -15,5 +14,13 @@ app.controller("addCtrl", ["$scope", "$firebaseArray", function($scope, $firebas
 			album: $scope.newSong.album,
 			year: $scope.newSong.year
 		})
+	} // end of addSong function
+
+	$scope.deleteSong = function() {
+		console.log("hear you delete button");
+		// $scope.songsToDelete.remove({
+		// })
 	}
+	
 }]);
+
