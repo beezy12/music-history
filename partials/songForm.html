@@ -3,27 +3,29 @@
     <div class="row">
       <div class="labels centered">  -->
 
-          <ul>
-            <a href="/#/songs/list">Song List</a>
-            <a href="/#/songs/form">Add Music</a>
-          </ul>
+    <ul>
+      <a href="/#/songs/list">Song List</a>
+      <a href="/#/songs/form">Add Music</a>
+    </ul>
 
 
-         <section>
-            <div>
-              Song name: <input type="text" ng-model="newSong.title" />
-            </div>
-            <div>
-              Album Name: <input type="text" ng-model="newSong.album" />
-            </div>
-            <div>
-              Album Year: <input type="text" ng-model="newSong.year" />
-            </div>
-            <div>
-              Artist: <input type="text" ng-model="newSong.artist" />
-            </div>
-            <button ng-click="addSong()">Add Song</button>
-          </section>
+    <section>
+
+      <div>
+        Song name: <input type="text" ng-model="newSong.title" />
+      </div>
+
+      <div>
+        Artist: <input type="text" ng-model="newSong.artist" />
+      </div>
+
+      <div>
+        Album Name: <input type="text" ng-model="newSong.album" />
+      </div>
+
+      <button ng-click="addSong()">Add Song</button>
+      
+    </section>
       <!-- </div>
     </div>
   </div>      

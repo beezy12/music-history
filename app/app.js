@@ -7,10 +7,6 @@ app.config(['$routeProvider',
     		templateUrl: 'partials/songOutput.html',
     		controller: 'MusicCtrl'
 		})
-		.when('/songs/form', {
-			templateUrl: 'partials/songForm.html',
-			controller: 'addCtrl'
-		})
 		.when('/songs/details/:songId', {
 			templateUrl: 'partials/songForm.html',
 			controller: 'MusicCtrl'

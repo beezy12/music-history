@@ -14,8 +14,7 @@ app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $fireb
 		$scope.songs.$add({
 			artist: $scope.newSong.artist,
 			title: $scope.newSong.title,
-			album: $scope.newSong.album,
-			year: $scope.newSong.year
+			album: $scope.newSong.album
 		})
 	} // end of addSong function
 
@@ -25,6 +24,13 @@ app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $fireb
 	$scope.deleteSong = function(butt) {
 		$scope.songs.$remove(butt)
 	} // end of delete function
+
+
+	// filtering button for select dropdowns
+	$scope.filterMe = function(value) {
+	// if song or album dropdown.value === 
+		if()
+	}
 	
 }]);
 			

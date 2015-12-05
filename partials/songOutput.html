@@ -116,7 +116,7 @@
 
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control search" placeholder="Search">
+            <input ng-model="searching" type="text" class="form-control search" placeholder="Search for song here">
           </div>
           <button type="submit" class="btn btn-default search">Submit</button>
           
@@ -171,7 +171,7 @@
         <div class="margBot">
           <select id="artist" class="margBot form-control" name="artist" ng-model="artistModel">
             <option></option>
-            <option ng-repeat="butt in songs"> {{ butt.artist }} </option>
+            <option ng-repeat="butt in songs | filter: filterMe"> {{ butt.artist }} </option>
           </select>
         </div>
           
@@ -181,7 +181,7 @@
         <div class="margBot">
           <select id="album" class="margBot form-control" name="album" ng-model="albumModel">
             <option></option>
-            <option ng-repeat="butt in songs"> {{ butt.album }}</option>
+            <option ng-repeat="butt in songs | filter: filterMe"> {{ butt.album }}</option>
           </select>
         </div>
 
@@ -230,14 +230,15 @@
                     </table>
               </form> -->
             <div>
-              <input id="filter-button" type="submit" value="Filter"></input>
+              <input ng-click="filterMe()" id="filter-button" type="submit" value="Filter"></input>
             </div>
+
         </div>  <!-- closing div for lefty -->
           
           
         <div class="col-md-7 col-md-offset-2 righty box" id="songBox">
           <!-- <h3 ng-repeat="song in songs"> {{ song.title }} </h3> -->
-          <p ng-repeat="butt in songs"> {{ butt.title + " by " + butt.artist + " on the album " + butt.album }} 
+          <p ng-repeat="butt in songs | filter: searching"> {{ butt.title + " by " + butt.artist + " on the album " + butt.album }} 
             <button ng-click="deleteSong(butt)" type="button">Delete</button>
           </p>
         </div>
