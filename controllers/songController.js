@@ -1,21 +1,12 @@
-angular
-	.module("MusicApp")
-	.controller("MusicCtrl", ["$q", "$http", "$scope", "simpleSongs", function($q, $http, $scope, simpleSongs) {
+// var app = angular.module("MusicApp", ["firebase"]);
+app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
 
-	// $scope.searchText = "";
+	$scope.searchText = "";
 	$scope.songs = [];
 	
-	// simpleSongs.loadSongs().then(
-	// 	function () {
-	// 		$scope.songs = simpleSongs.getSongs();
-	// 		console.log("$scope.songs", $scope.songs);
-	// 	},
-	// 	function (error) {
-	// 		console.log("error", error);
-	// 	}
-	// );
-
-	//create firebase ref here
+	var ref = new Firebase("https://glaring-fire-4247.firebaseio.com/songs");
+	$scope.songs = $firebaseArray(ref);
+	console.log("$scope.songs", $scope.songs);
 
 
 }]);
