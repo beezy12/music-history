@@ -5,7 +5,11 @@ app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $fireb
 	$scope.artistModel;
 	$scope.albumModel;
 
+	// getting Firebase reference to the songs path
 	var ref = new Firebase("https://glaring-fire-4247.firebaseio.com/songs");
+
+	// using firebaseArray to turn the firebase object reference into an array to use with Angular because
+	// Angular only likes arrays and not objects
 	$scope.songs = $firebaseArray(ref);
 
 	$scope.newSong = { artist: "", album: "", name: "" };
@@ -14,14 +18,13 @@ app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $fireb
 
 	// functionality for adding a song
 	$scope.addSong = function() {
-		console.log("add song function is clicking");
 		$scope.songs.$add({
 			artist: $scope.newSong.artist,
 			title: $scope.newSong.title,
 			album: $scope.newSong.album
 		})
 
-		// HOW TO CHANGE BACK TO THE MAIN PAGE AFTER CLICKING ADD SONG????
+		// HOW TO CHANGE BACK TO THE MAIN PAGE AFTER CLICKING ADD SONG?????????????????
 
 	} // end of addSong function
 
