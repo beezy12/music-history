@@ -1,6 +1,10 @@
 // var app = angular.module("MusicApp", ["firebase"]);
 app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
 
+
+	$scope.artistModel;
+	$scope.albumModel;
+
 	var ref = new Firebase("https://glaring-fire-4247.firebaseio.com/songs");
 	$scope.songs = $firebaseArray(ref);
 
@@ -16,6 +20,9 @@ app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $fireb
 			title: $scope.newSong.title,
 			album: $scope.newSong.album
 		})
+
+		// HOW TO CHANGE BACK TO THE MAIN PAGE AFTER CLICKING ADD SONG????
+
 	} // end of addSong function
 
 
@@ -24,13 +31,6 @@ app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $fireb
 	$scope.deleteSong = function(butt) {
 		$scope.songs.$remove(butt)
 	} // end of delete function
-
-
-	// filtering button for select dropdowns
-	// $scope.filterMe = function(value) {
-	// // if song or album dropdown.value === 
-	// 	if()
-	// }
 	
 }]);
 			

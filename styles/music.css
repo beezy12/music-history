@@ -45,6 +45,11 @@ body {
 	margin: 0 0 0 30px;
 }
 
+.linkLists {
+	margin: 50px 0 0 0;
+}
+
+
 #leftColumn {
 	padding: 40px 0 0 80px;
 	width: 300px;

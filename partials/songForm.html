@@ -1,15 +1,8 @@
-<!-- <div class="col-md-12 enter-music magic box">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="labels centered">  -->
 
-    <ul>
-      <a href="/#/songs/list">Song List</a>
-      <a href="/#/songs/form">Add Music</a>
-    </ul>
+<!-- <div class="col-md-12 enter-music magic box"> -->
 
 
-    <section>
+<div class="col-md-7 col-md-offset-2 righty box" id="songBox">
 
       <div>
         Song name: <input type="text" ng-model="newSong.title" />
@@ -23,35 +16,13 @@
         Album Name: <input type="text" ng-model="newSong.album" />
       </div>
 
-      <button ng-click="addSong()">Add Song</button>
+      <button ng-click="addSong()" ng-href="partials/main.html">Add Song</button>
       
-    </section>
-      <!-- </div>
-    </div>
-  </div>      
-</div> -->
+</div>
+    
 
 
 
 
 
-<!-- <div class="col-md-12 enter-music magic box">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="labels centered">
 
-            <label for="song-name" >Song Name</label>
-            <input type="text" id="song-grab" name="song-name" ng-model="newSong.name" />
-
-            <label for="artist-name" >Artist Name</label>
-            <input type="text" id="artist-grab" name="artist-name">
-
-            <label for="album-name" >Album Name</label>
-            <input type="text" id="album-grab" name="album-name">
-            <br/>
-
-            <button id="add-button">Add</button>
-          </div>
-      </div>
-    </div>      
-  </div>
