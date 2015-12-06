@@ -168,22 +168,29 @@
         <div>
           <label for="artist">Artist:</label>
         </div>
+
+
         <div class="margBot">
-          <select id="artist" class="margBot form-control" name="artist" ng-model="artistModel">
+          <select id="artist" class="margBot form-control" name="artist" ng-model="searching">
             <option></option>
-            <option ng-repeat="butt in songs | filter: filterMe"> {{ butt.artist }} </option>
+            <option ng-repeat="butt in songs | filter: what"> {{ butt.artist }} </option>
           </select>
         </div>
+
+        <div>{{ butt.artist }}</div>
+
           
         <div>
           <label for="albumSelect">Album:</label>
         </div>
         <div class="margBot">
-          <select id="album" class="margBot form-control" name="album" ng-model="albumModel">
+          <select id="album" class="margBot form-control" name="album" ng-model="butt.album">
             <option></option>
-            <option ng-repeat="butt in songs | filter: filterMe"> {{ butt.album }}</option>
+            <option ng-repeat="butt in songs"> {{ butt.album }}</option>
           </select>
         </div>
+
+        <div>{{ butt.album }}</div>
 
         <div>
           <label for="genre">Genre:</label>

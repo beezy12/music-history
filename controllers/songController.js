@@ -27,10 +27,10 @@ app.controller("MusicCtrl", ["$scope", "$firebaseArray", function($scope, $fireb
 
 
 	// filtering button for select dropdowns
-	$scope.filterMe = function(value) {
-	// if song or album dropdown.value === 
-		if()
-	}
+	// $scope.filterMe = function(value) {
+	// // if song or album dropdown.value === 
+	// 	if()
+	// }
 	
 }]);
 			
