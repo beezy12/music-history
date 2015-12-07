@@ -11,8 +11,7 @@
 
 
 
-<body ng-app="MusicApp" ng-controller="MusicCtrl">
-
+<body ng-app="MusicApp">
 
 <!--********************** NAVBAR ************************************************************-->
 
@@ -54,98 +53,19 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  
+ <!--******************************************************************************************************-->
 
 
-
-
-  <!-- ****************** LEFT COLUMN ********************************************************** -->    
-  
-  <div class="container-fluid">
-    <div class="row bottom-half">
-        <div class="col-md-3 lefty box">
-
-                    <div class="center">
-                        <div>
-                          <label for="songLength">Volume:</label>
-                        </div>
-                        <div class="margBot">
-                          <input type="range" class="slider" name="songLength" min="0" max="50" step="0.5" value="25">
-                        </div>
-                    </div>
-
-                    <form action="form.html" method="POST">
-              <div>
-                <label for="artist">Artist:</label>
-              </div>
-
-
-              <div class="margBot">
-                <select id="artist" class="margBot form-control" name="artist" ng-model="artistModel">
-                  <option></option>
-                  <option ng-repeat="butt in songs"> {{ butt.artist }} </option>
-                </select>
-              </div>
-
-                
-              <div>
-                <label for="albumSelect">Album:</label>
-              </div>
-              <div class="margBot">
-                <select id="album" class="margBot form-control" name="album" ng-model="albumModel">
-                  <option></option>
-                  <option ng-repeat="butt in songs"> {{ butt.album }}</option>
-                </select>
-              </div>
-
-              <div>{{ butt.album }}</div>
-
-              <div>
-                <label for="genre">Genre:</label>
-              </div>
-              <div class="margBot">
-                <table>
-                  <tr>
-                    <td><input type="checkbox" name="rock" value="rock">Rock</td>
-                    <td><input type="checkbox" name="classical" value="classical">Classical</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="pop" value="pop">Pop</td>
-                    <td><input type="checkbox" name="jazz" value="jazz">Jazz</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" name="blues" value="blues">Blues</td>
-                    <td><input type="checkbox" name="hip hop" value="hip hop">Hip Hop</td>
-                  </tr>
-                </table>
-              </div>
-            </form>
-              
-            <!-- <div>
-              <input ng-click="filterMe()" id="filter-button" type="submit" value="Filter"></input>
-            </div> -->
-      </div>  <!-- closing div for lefty -->
-
-
-
+ <!--THIS WHERE ALL THE PARTIALS ARE LOADED-->
+          
   <div ng-view></div>
-
-      
-  </div>           <!-- closing for row -->
-</div>      <!-- closing for container-fluid -->
-
           
           
-          
-
-
-
-
-
 
 
 
 <script src="lib/bower_components/angular/angular.min.js"></script>
+<!-- <script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script> -->
 <script src="lib/bower_components/angular-route/angular-route.js"></script>
 <script src="lib/bower_components/firebase/firebase.js"></script>
 <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
@@ -153,8 +73,14 @@
 <!-- <script src="songs.js"></script> -->
 <script src="app/app.js"></script>
 <!-- <script src="factories/songStorage.js"></script> -->
-<script src="controllers/songController.js"></script>
+<script src="controllers/addController.js"></script>
+<script src="controllers/listController.js"></script>
+<script src="controllers/songDetailController.js"></script>
 
 
 </body>
 </html>
+
+
+
+

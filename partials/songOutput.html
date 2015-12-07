@@ -1,9 +1,92 @@
 
 
-<div class="col-md-7 col-md-offset-2 righty box" id="songBox">
-    <p ng-repeat="butt in songs | filter: searching | filter: artistModel | filter: albumModel"> {{ butt.title + " by " + butt.artist + " on the album " + butt.album }} 
-        <button href="" ng-click="deleteSong(butt)" type="button">Delete</button>
-    </p>
-</div>
+  <!-- ****************** LEFT COLUMN ********************************************************** -->    
+  
+  <div class="container-fluid">
+    <div class="row bottom-half">
+        <div class="col-md-3 lefty box">
 
+                    <div class="center">
+                        <div>
+                          <label for="songLength">Volume:</label>
+                        </div>
+                        <div class="margBot">
+                          <input type="range" class="slider" name="songLength" min="0" max="50" step="0.5" value="25">
+                        </div>
+                    </div>
+
+                    <form action="form.html" method="POST">
+              <div>
+                <label for="artist">Artist:</label>
+              </div>
+
+
+              <div class="margBot">
+                <select id="artist" class="margBot form-control" name="artist" ng-model="artistModel">
+                  <option></option>
+                  <option ng-repeat="butt in ArrayOfSongs"> {{ butt.artist }} </option>
+                </select>
+              </div>
+
+                
+              <div>
+                <label for="albumSelect">Album:</label>
+              </div>
+              <div class="margBot">
+                <select id="album" class="margBot form-control" name="album" ng-model="albumModel">
+                  <option></option>
+                  <option ng-repeat="butt in ArrayOfSongs"> {{ butt.album }} </option>
+                </select>
+              </div>
+
+              <div>{{ butt.album }}</div>
+
+              <div>
+                <label for="genre">Genre:</label>
+              </div>
+              <div class="margBot">
+                <table>
+                  <tr>
+                    <td><input type="checkbox" name="rock" value="rock">Rock</td>
+                    <td><input type="checkbox" name="classical" value="classical">Classical</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="pop" value="pop">Pop</td>
+                    <td><input type="checkbox" name="jazz" value="jazz">Jazz</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="blues" value="blues">Blues</td>
+                    <td><input type="checkbox" name="hip hop" value="hip hop">Hip Hop</td>
+                  </tr>
+                </table>
+              </div>
+            </form>
+              
+            <!-- <div>
+              <input ng-click="filterMe()" id="filter-button" type="submit" value="Filter"></input>
+            </div> -->
+      </div>  <!-- closing div for lefty -->
+
+
+
+
+      
+
+
+
+		<div class="col-md-7 col-md-offset-2 righty box" id="songBox">
+		    <div ng-repeat="butt in ArrayOfSongs | filter: searching | filter: artistModel | filter: albumModel"> 
+			     <h4><a href="#/songs/details/{{butt.$id}}">{{ butt.title }}</a></h4>
+			    <p> by {{ butt.artist }} on the album {{ butt.album }} 
+			    <button href="" ng-click="deleteSong(butt)" type="button">Delete</button></p>
+          <hr />
+		    </div>
+		</div>
+
+
+
+
+
+  </div>           <!-- closing for row -->
+</div>      <!-- closing for container-fluid -->
   
