@@ -5,8 +5,8 @@ app.controller("listCtrl", [ "$q", "$http", "$scope", "$routeParams", "$firebase
 
 	
 		$scope.ArrayOfSongs = [];
-		$scope.searchArtist;
-		$scope.searchAlbum;
+		$scope.artistModel;
+		$scope.albumModel;
 
 		//references firebase
 		var songRef = new Firebase("https://glaring-fire-4247.firebaseio.com/songs");
@@ -25,6 +25,15 @@ app.controller("listCtrl", [ "$q", "$http", "$scope", "$routeParams", "$firebase
 			//set the songs as an array to output
 			$scope.ArrayOfSongs = data;
 		});
+
+
+		/******************************** DELETE FUNCTIONALITY *********************************************/
+
+		// functionality for deleting a song
+		$scope.deleteSong = function(butt) {
+			console.log("delete was clicked");
+			$scope.ArrayOfSongs.$remove(butt)
+		} // end of delete function
 
 }]);
 

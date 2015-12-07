@@ -20,13 +20,18 @@
                 <label for="artist">Artist:</label>
               </div>
 
-
-              <div class="margBot">
+              
+                <select id="artist" class="margBot form-control" name="artist" ng-model="searchArtist">
+                  <option></option>
+                  <option ng-repeat="butt in ArrayOfSongs">{{ butt.artist }}</option>
+                </select>
+              
+              <!-- <div class="margBot">
                 <select id="artist" class="margBot form-control" name="artist" ng-model="artistModel">
                   <option></option>
                   <option ng-repeat="butt in ArrayOfSongs"> {{ butt.artist }} </option>
                 </select>
-              </div>
+              </div> -->
 
                 
               <div>
@@ -35,11 +40,30 @@
               <div class="margBot">
                 <select id="album" class="margBot form-control" name="album" ng-model="albumModel">
                   <option></option>
-                  <option ng-repeat="butt in ArrayOfSongs"> {{ butt.album }} </option>
+                  <option ng-repeat="butt in ArrayOfSongs">{{ butt.album }}</option>
                 </select>
               </div>
 
-              <div>{{ butt.album }}</div>
+              <!-- <div>{{ butt.album }}</div> -->
+
+
+      
+
+
+      <!-- <div id="main_right_sidebar">
+        <p ng-repeat="item in ArrayOfSongs | filter: searchAlbum | filter: searchArtist">
+          {{item.title + " by " + item.artist + " on the album "+ item.album}}
+          <button ng-click="removeSong(item)">Delete</button>
+        </p>
+          output individual songs -->
+        <!-- <div id="indiv_songs">
+        
+        </div> end indiv_songs --> 
+        <!-- <button id="moreSongs">More</button> -->
+      <!-- </div>end main_right_sidebar -->
+
+
+
 
               <div>
                 <label for="genre">Genre:</label>
@@ -75,7 +99,7 @@
 
 
 		<div class="col-md-7 col-md-offset-2 righty box" id="songBox">
-		    <div ng-repeat="butt in ArrayOfSongs | filter: searching | filter: artistModel | filter: albumModel"> 
+		    <div ng-repeat="butt in ArrayOfSongs | filter: searching | filter: searchArtist | filter: albumModel"> 
 			     <h4><a href="#/songs/details/{{butt.$id}}">{{ butt.title }}</a></h4>
 			    <p> by {{ butt.artist }} on the album {{ butt.album }} 
 			    <button href="" ng-click="deleteSong(butt)" type="button">Delete</button></p>

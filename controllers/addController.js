@@ -28,14 +28,6 @@ app.controller("addCtrl", ["$scope", "$firebaseArray", function($scope, $firebas
 	} // end of addSong function
 
 
-/******************************** DELETE FUNCTIONALITY *********************************************/
-
-	// functionality for deleting a song
-	$scope.deleteSong = function(butt) {
-		$scope.songs.$remove(butt)
-	} // end of delete function
-
-
 
 
 
