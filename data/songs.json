@@ -24,6 +24,7 @@
           "title": "Over and Over",
           "artist": "Hot Chip",
           "album": "Coming On Strong"      
+<<<<<<< HEAD
         },
         "reptile": {
           "title": "Reptile",
@@ -43,3 +44,9 @@
 
     
     
+=======
+        }
+    }
+}
+   
+>>>>>>> angular

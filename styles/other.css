@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', 'Cinzel', sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1415886541506-6efc5e4b1786?dpr=2&fit=crop&fm=jpg&h=725&ixlib=rb-0.3.5&q=50&w=1300");
+  background-repeat: no-repeat;
+  background-size: cover;}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.6; } }
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.6; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.6; } }
+.box {
+  opacity: 0;
+  /* make things invisible on start */
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
+/**************************************************************
+                    SASS
+**************************************************************/
+/************************************************************************/
+.lefty {
+  border-radius: 0 25px 25px 0; }
+
+.righty {
+  border-radius: 25px 0 0 25px; }
+
+.enter-music {
+  border-radius: 0 0 25px 25px; }
+
+.lefty, .righty {
+  padding: 40px; }
+
+.container-fluid {
+  padding: 0; }
+
+.blue, .lefty, .righty, .enter-music {
+  background-color: #6EDBFF;
+  opacity: 0.9; }
+
+.labels label {
+  margin: 0 0 10px 0; }
+.labels button {
+  margin: 0 0 0 15px; }
+.labels input {
+  margin: 0 0 30px 0; }
+
+.lefty {
+  margin: 0 0 30 0; }
+
+/***********************************************************************/
+/**************************************************************
+    NAVBAR
+**************************************************************/
+.blue {
+  z-index: 1; }
+
+.dropdown-menu li {
+  padding: 5px 0 0 20px; }
+
+.bee {
+  /* for the B glyphicon */
+  font-size: 1.8em;
+  margin: 12px 40px 0 30px; }
+
+ul.linkLists {
+  margin: 22px 0 0 0;
+}
+
+/**************************************************************
+    BOTTOM HALF
+**************************************************************/
+.bottom-half {
+  margin: 40px 0 0 0; }
+
+/**************************************************************
+    ADD MUSIC PAGE
+**************************************************************/
+.enter-music {
+  width: 1135px;
+  height: 500px;
+  margin: 20px 20px 0 60px;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s; }
+
+.labels label {
+  font-size: 1.8em; }
+
+.labels button {
+  width: 100px; }
+
+/**************************************************************
+    MAGIC
+**************************************************************/
+.visible {
+  display: block; }
+
+.magic {
+  display: none; }
+
+/**************************************************************
+    RANDOM STYLING
+**************************************************************/
+.btn button {
+  border: none; }
+
+.clicky {
+  margin: 0 0 0 25px;
+  padding: 0 5px; }
+
+.margBot {
+  /* adds some margin to the bottom of elements */
+  margin-bottom: 15px; }
+
+.labels input {
+  /* stacks the input labels for the add music page */
+  display: block; }
+
+.centered {
+  /* centers EXACTLY in the middle of the div. Got it from css tricks.com */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%); }
+
+.songs li {
+  display: inline;
+  padding: 0 10px 0 10px; }
+
+#song-grab, #artist-grab, #album-grab {
+  font-size: 1.5em; }
+
+#pushIt {
+  margin: 35px 0 0 150px; }
+
+.glyphs {
+  font-size: 2em;
+  margin: 0 20px 0 0; }
+
+.glyphA {
+  margin: 10px 20px 0 80px; }
+
+a.dropdown-toggle {
+  margin: 10px 0 0 0; }
+
+.bee {
+  margin: 10px 20px 0 40px;
+  font-size: 3em; }
+
+.navbar-header {
+  border-right: 1px solid black; }
+
+.search {
+  margin: 0 0 0 10px; }
+
+.navbar-form {
+  margin-bottom: 0; }
+
+input[type="range"] {
+  width: 150px; }
+
+/*# sourceMappingURL=main.css.map */

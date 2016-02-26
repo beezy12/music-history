@@ -1,20 +1,23 @@
- <!doctype html>
+<!doctype html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Music Page</title>
   <link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/other.css">
   <link href='https://fonts.googleapis.com/css?family=Orbitron:400,500,700|Cinzel' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
 
-  <!-- ******** -->
-  <nav class="navbar navbar-default blue box">
+
+<body ng-app="MusicApp">
+
+<!--********************** NAVBAR ************************************************************-->
+
+<nav class="navbar navbar-default blue box">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
+
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
@@ -25,155 +28,55 @@
         <span class="glyphicon glyphicon-bold bee">-BOX </span>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            ADD / SHOW MUSIC <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li id="list-music">List Music</li>
-                <li id="add-music">Add Music</li>
-            </ul>
-          </li>
+          <ul class="linkLists">
+            <a href="/#/songs/list">Song List</a> |
+            <a href="/#/songs/form">Add Music</a>
+          </ul>
         </ul>
+
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control search" placeholder="Search">
+            <input ng-model="searching" type="text" class="form-control search" placeholder="Search for song here">
           </div>
           <button type="submit" class="btn btn-default search">Submit</button>
-          
+
           <span class="glyphs glyphA glyphicon glyphicon-fast-backward"></span>
-          <!-- <span class="glyphs glyphicon glyphicon-backward"></span> -->
           <span class="glyphs glyphicon glyphicon-stop"></span>
           <span class="glyphs glyphicon glyphicon-play"></span>
           <span class="glyphs glyphicon glyphicon-pause"></span>
-          <!-- <span class="glyphs glyphicon glyphicon-forward"></span> -->
           <span class="glyphs glyphicon glyphicon-fast-forward"></span>
         </form>
 
-        
-        <ul class="nav navbar-nav navbar-right">
-          
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">options <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
+        <ul class="nav navbar-nav navbar-right"></ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  <!-- *********** -->
+ <!--******************************************************************************************************-->
 
 
+ <!--THIS WHERE ALL THE PARTIALS ARE LOADED-->
 
-
-  <div class="container-fluid">
-    <div class="row bottom-half">
-        <div class="col-md-3 lefty box">
-
-              <div class="center">
-                  <div>
-                    <label for="songLength">Volume:</label>
-                  </div>
-                  <div class="margBot">
-                    <input type="range" class="slider" name="songLength" min="0" max="50" step="0.5" value="25">
-                  </div>
-              </div>
-
-
-              <form action="form.html" method="POST">
-
-                  <div id="music-info">
-                  </div>
-                  
-                  <div>
-                    <label for="genre">Genre:</label>
-                  </div>
-                    <table class="margBot">
-                      <tr>
-                        <td><input type="checkbox" name="rock" value="rock">Rock</td>
-                        <td><input type="checkbox" name="classical" value="classical">Classical</td>
-                      </tr>
-                      <tr>
-                        <td><input type="checkbox" name="pop" value="pop">Pop</td>
-                        <td><input type="checkbox" name="jazz" value="jazz">Jazz</td>
-                      </tr>
-                      <tr>
-                        <td><input type="checkbox" name="blues" value="blues">Blues</td>
-                        <td><input type="checkbox" name="hip hop" value="hip hop">Hip Hop</td>
-                      </tr>
-                    </table>
-              </form>
-            <div>
-              <input id="filter-button" type="submit" value="Filter"></input>
-            </div>
-        </div>  <!-- closing div for lefty -->
-          
-          
-        <div class="col-md-7 col-md-offset-2 righty box" id="songBox">
-        </div>
-          
-
-    </div>           <!-- closing for row -->
-  </div>      <!-- closing for container-fluid -->
-
-
-  
-
-  <!-- add music hidden page -->
-  <div class="col-md-12 enter-music magic box">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="labels centered">
-
-            <label for="song-name" >Song Name</label>
-            <input type="text" id="song-grab" name="song-name">
-
-            <label for="artist-name" >Artist Name</label>
-            <input type="text" id="artist-grab" name="artist-name">
-
-            <label for="album-name" >Album Name</label>
-            <input type="text" id="album-grab" name="album-name">
-            <br/>
-
-            <button id="add-button">Add</button>
-          </div>
-      </div>
-    </div>      
-  </div>
+  <div ng-view></div>
 
 
 
 
 
-<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
+<script src="lib/bower_components/angular/angular.min.js"></script>
+<!-- <script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script> -->
+<script src="lib/bower_components/angular-route/angular-route.js"></script>
+<script src="lib/bower_components/firebase/firebase.js"></script>
+<script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
+
+<!-- <script src="songs.js"></script> -->
+<script src="app/app.js"></script>
+<!-- <script src="factories/songStorage.js"></script> -->
+<script src="controllers/addController.js"></script>
+<script src="controllers/listController.js"></script>
+<script src="controllers/songDetailController.js"></script>
+
 
 </body>
 </html>
-
-        
-
-
-      
-
-
-
-
-
-
-
-                    
-                    
-
-                  
-                  
-                  
-
