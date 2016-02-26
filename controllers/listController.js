@@ -3,7 +3,7 @@
 app.controller("listCtrl", [ "$q", "$http", "$scope", "$routeParams", "$firebaseArray",
 	function($q, $http, $scope, $routeParams, $firebaseArray){
 
-	
+
 		$scope.ArrayOfSongs = [];
 		$scope.artistModel;
 		$scope.albumModel;
@@ -18,7 +18,8 @@ app.controller("listCtrl", [ "$q", "$http", "$scope", "$routeParams", "$firebase
 
 
 		//when array is loaded,
-		songRefArray.$loaded()
+		songRefArray
+		.$loaded()
 		.then(function(data){
 			//display the data
 			console.log("data", data);
@@ -43,4 +44,4 @@ app.controller("listCtrl", [ "$q", "$http", "$scope", "$routeParams", "$firebase
 
 
 
-		
+
