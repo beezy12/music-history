@@ -1,7 +1,7 @@
 
 
-  <!-- ****************** LEFT COLUMN ********************************************************** -->    
-  
+  <!-- ****************** LEFT COLUMN ********************************************************** -->
+
   <div class="container-fluid">
     <div class="row bottom-half">
         <div class="col-md-3 lefty box">
@@ -20,34 +20,34 @@
                 <label for="artist">Artist:</label>
               </div>
 
-              
+
                 <select id="artist" class="margBot form-control" name="artist" ng-model="searchArtist">
                   <option></option>
-                  <option ng-repeat="butt in ArrayOfSongs">{{ butt.artist }}</option>
+                  <option ng-repeat="artist in ArrayOfSongs">{{ artist.artist }}</option>
                 </select>
-              
+
               <!-- <div class="margBot">
                 <select id="artist" class="margBot form-control" name="artist" ng-model="artistModel">
                   <option></option>
-                  <option ng-repeat="butt in ArrayOfSongs"> {{ butt.artist }} </option>
+                  <option ng-repeat="artist in ArrayOfSongs"> {{ artist.artist }} </option>
                 </select>
               </div> -->
 
-                
+
               <div>
                 <label for="albumSelect">Album:</label>
               </div>
               <div class="margBot">
                 <select id="album" class="margBot form-control" name="album" ng-model="albumModel">
                   <option></option>
-                  <option ng-repeat="butt in ArrayOfSongs">{{ butt.album }}</option>
+                  <option ng-repeat="album in ArrayOfSongs">{{ album.album }}</option>
                 </select>
               </div>
 
-              <!-- <div>{{ butt.album }}</div> -->
+              <!-- <div>{{ album.album }}</div> -->
 
 
-      
+
 
 
       <!-- <div id="main_right_sidebar">
@@ -57,8 +57,8 @@
         </p>
           output individual songs -->
         <!-- <div id="indiv_songs">
-        
-        </div> end indiv_songs --> 
+
+        </div> end indiv_songs -->
         <!-- <button id="moreSongs">More</button> -->
       <!-- </div>end main_right_sidebar -->
 
@@ -85,7 +85,7 @@
                 </table>
               </div>
             </form>
-              
+
             <!-- <div>
               <input ng-click="filterMe()" id="filter-button" type="submit" value="Filter"></input>
             </div> -->
@@ -94,15 +94,15 @@
 
 
 
-      
+
 
 
 
 		<div class="col-md-7 col-md-offset-2 righty box" id="songBox">
-		    <div ng-repeat="butt in ArrayOfSongs | filter: searching | filter: searchArtist | filter: albumModel"> 
-			     <h4><a href="#/songs/details/{{butt.$id}}">{{ butt.title }}</a></h4>
-			    <p> by <b>{{ butt.artist }}</b> on the album <b><em>{{ butt.album }}</em></b>
-			    <button href="" ng-click="deleteSong(butt)" type="button">Delete</button></p>
+		    <div ng-repeat="thing in ArrayOfSongs | filter: searching | filter: searchArtist | filter: albumModel">
+			     <h4><a href="#/songs/details/{{thing.$id}}">{{ thing.title }}</a></h4>
+			    <p> by <b>{{ thing.artist }}</b> on the album <b><em>{{ thing.album }}</em></b>
+			    <button href="" ng-click="deleteSong(thing)" type="button">Delete</button></p>
           <hr />
 		    </div>
 		</div>
@@ -113,4 +113,4 @@
 
   </div>           <!-- closing for row -->
 </div>      <!-- closing for container-fluid -->
-  
+
