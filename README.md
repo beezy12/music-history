@@ -9,4 +9,6 @@ Clicking the delete button next to a song will remove it from the user's list.
 
 Users can add a new song by selecting the 'add music' tab, and then filling in song and artist info on that page.
 
+Uses angular, angular-router, and Firebase....in addition to typical front-end technologies.
+
 
