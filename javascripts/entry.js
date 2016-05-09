@@ -1,5 +1,5 @@
 requirejs.config({
-	baseUrl: "./javascripts",  
+	baseUrl: "./javascripts",
 
 	shim : {
         bootstrapJs : {
@@ -26,17 +26,17 @@ requirejs.config({
 
 
 
-require(["bootstrapJs", "songs"],    
-	function(bootstrap, songs) { 
+require(["bootstrapJs", "songs"],
+	function(bootstrap, songs) {
 
 
-		
-
-		
-
-		
-	
 });
+
+
+
+
+
+
 
 
 
